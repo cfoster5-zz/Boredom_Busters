@@ -6,7 +6,7 @@
 
 <ion-content padding>
   <h2>Welcome to Boredom Busters!</h2>
-  <ion-img width="180" height="180" src = "BoredomBusterCreateIconcopy.png" alt="Create Icon"></ion-img>
+
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   <ion-list>
     <ion-item *ngFor="let item of items">
