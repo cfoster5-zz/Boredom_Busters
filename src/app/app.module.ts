@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { CouponsPage } from '../pages/coupons/coupons';
+import { CherryPickPage } from '../pages/cherrypick/cherrypick';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { CalendarPage } from '../pages/calendar/calendar';
+import { MorePage } from '../pages/more/more';
 import { AdminPage } from '../pages/admin/admin';
 import { VendorListPage } from '../pages/vendorlist/vendorlist';
 
@@ -17,11 +17,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    CouponsPage,
+    CherryPickPage,
     HomePage,
     TabsPage,
-    CalendarPage,
+    MorePage,
     AdminPage
   ],
   imports: [
@@ -31,11 +31,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    CouponsPage,
+    CherryPickPage,
     HomePage,
     TabsPage,
-    CalendarPage,
+    MorePage,
     AdminPage
   ],
   providers: [

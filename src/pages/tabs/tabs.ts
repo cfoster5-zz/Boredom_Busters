@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
+import { CouponsPage } from '../coupons/coupons';
+import { CherryPickPage } from '../cherrypick/cherrypick';
 import { HomePage } from '../home/home';
-import { CalendarPage } from '../calendar/calendar';
+import { MorePage } from '../more/more';
 import { AdminPage } from '../admin/admin';
 
 @Component({
@@ -12,9 +12,9 @@ import { AdminPage } from '../admin/admin';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
-  tab4Root = CalendarPage;
+  tab2Root = CouponsPage;
+  tab3Root = CherryPickPage;
+  tab4Root = MorePage;
   tab5Root = AdminPage;
 
   constructor() {
