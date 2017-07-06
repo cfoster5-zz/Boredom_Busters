@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { AdminPage } from '../pages/admin/admin';
+import { VendorListPage } from '../pages/vendorlist/vendorlist';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
