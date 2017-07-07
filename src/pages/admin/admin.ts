@@ -21,12 +21,28 @@ export class AdminPage {
       // Examine the text in the response
       response.json().then(function(data) {
         console.log(data);
+        document.getElementById("chadd").innerHTML = data[0].VEN_Name;
       });
     }
   )
   .catch(function(err) {
     console.log('Fetch Error :-S', err);
   });
+
+
+
+
+
+
+  /*-------------------------*/
+    /*fetch('http://34.210.2.173/Vendors.php')
+    .then(
+    function (data) {
+    //pull dummy data from php vendors
+    document.getElementById("chadd").innerHTML = data ;
+
+    console.log('Request succeeded with JSON response', data);
+  });*/
 
   }
 
