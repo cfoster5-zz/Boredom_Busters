@@ -1,10 +1,7 @@
 $(document).ready(function(){
 
-    $("#signin").click(function(){
+    $( window ).load(function() {
 
-        var search = $('#search').val();
-
-        var data = "q=" + search;
 
         $.ajax({
             method: "post",

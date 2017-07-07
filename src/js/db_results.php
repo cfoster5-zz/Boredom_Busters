@@ -1,6 +1,5 @@
 <?php
 
-$query = $_POST['q'];
-echo '>:' . $query;
+echo "hi there";
 
 ?>
