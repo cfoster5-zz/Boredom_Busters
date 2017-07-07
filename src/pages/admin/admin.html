@@ -20,8 +20,14 @@
 
   </ion-list>
 
+  <ion-searchbar id="search" (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+
   <div padding>
-    <input id='search' type'text' placeholder='search'></input>
     <button id="signin" ion-button color="light" block>Sign In</button>
   </div>
 
