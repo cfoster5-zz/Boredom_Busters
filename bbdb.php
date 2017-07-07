@@ -1,6 +1,10 @@
 <?php
+//Be sure to upload bbdb.php and bbdb-retrieve.php to a publicly accessible location on your remote server, 
+// permissions should be set to 755 
+// absolute address to these scripts (I.e. 'http://www.website-address.suffix/directory'/bbdb-retrieve.php) FILL IN UNDERLINE***
+//we need this for the Ionic/Angular side of the project.
    header('Access-Control-Allow-Origin: *');
-
+    //******CREATE, UPDATE, DELETE DATA FROM TABLES 'Vendor', 'Categories', 'Coupons'
    // Define database connection parameters
    $hn      = 'localhost';
    $un      = 'username-of-database-here';
@@ -46,7 +50,7 @@
          $VEN_CLS        = filter_var($_REQUEST['VEN_CLS'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
          
          
-         // run PDO ****Need record names for Vendors Table, forgot them, get from sqlworkbench diagram****
+         // run PDO
          try {
             $sql  = "INSERT INTO Vendors( VEN_Name, VEN_Address, VEN_Address2, VEN_City, VEN_State, VEN_Zip,
                         VEN_Phone, VEN_Web, VEN_Price, VEN_Desc, VEN_OPN, VEN_CLS )
