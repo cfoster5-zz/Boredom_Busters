@@ -2,7 +2,6 @@ $(document).ready(function(){
 
     $( window ).load(function() {
 
-
         $.ajax({
             method: "post",
             url: "Boredom_Busters/src/js/db_results.php",
