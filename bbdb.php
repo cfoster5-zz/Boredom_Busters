@@ -1,6 +1,6 @@
 <?php
-//Be sure to upload bbdb.php and bbdb-retrieve.php to a publicly accessible location on your remote server, 
-// permissions should be set to 755 
+//Be sure to upload bbdb.php and bbdb-retrieve.php to a publicly accessible location on your remote server,
+// permissions should be set to 755
 // absolute address to these scripts (I.e. 'http://www.website-address.suffix/directory'/bbdb-retrieve.php) FILL IN UNDERLINE***
 //we need this for the Ionic/Angular side of the project.
    header('Access-Control-Allow-Origin: *');
@@ -48,13 +48,13 @@
          $VEN_Desc       = filter_var($_REQUEST['VEN_Desc'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
          $VEN_OPN        = filter_var($_REQUEST['VEN_OPN'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
          $VEN_CLS        = filter_var($_REQUEST['VEN_CLS'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
-         
-         
+
+
          // run PDO
          try {
             $sql  = "INSERT INTO Vendors( VEN_Name, VEN_Address, VEN_Address2, VEN_City, VEN_State, VEN_Zip,
                         VEN_Phone, VEN_Web, VEN_Price, VEN_Desc, VEN_OPN, VEN_CLS )
-                     VALUES( :VEN_Name, :VEN_Address, :VEN_Address2, :VEN_City, :VEN_State, :VEN_Zip, :VEN_Phone, :VEN_Web,  
+                     VALUES( :VEN_Name, :VEN_Address, :VEN_Address2, :VEN_City, :VEN_State, :VEN_Zip, :VEN_Phone, :VEN_Web,
                              :VEN_Price, :VEN_Desc, :VEN_OPN, :VEN_CLS)";
             $stmt    = $pdo->prepare($sql);
             $stmt->bindParam(':VEN_Name', $VEN_Name, PDO::PARAM_STR);
@@ -80,10 +80,10 @@
          }
 
             break;
-		
+
 		//Add a new record to the Categories table
 		case "categoriesCreate":
-		
+
 		$CAT_Type = filter_var($_REQUEST['CAT_Type'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
 		$CAT_Desc = filter_var($_REQUEST['CAT_Desc'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
 		$CAT_IMG = filter_var($_REQUEST['CAT_IMG'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
@@ -93,25 +93,25 @@
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':CAT_Type', $CAT_Type, PDO::PARAM_STR);
             $stmt->bindParam(':CAT_Desc', $CAT_Desc, PDO::PARAM_STR);
-			$stmt->bindParam(':CAT_IMG', $CAT_IMG, PDO::PARAM_STR);
+			      $stmt->bindParam(':CAT_IMG', $CAT_IMG, PDO::PARAM_STR);
             $stmt->execute();
 
             echo json_encode(array('message' => 'Category Type: '. $CAT_Type .' : ' . $CAT_Desc .' was added to the database'));
          }
-        
+
          catch(PDOException $e)
          {
             echo $e->getMessage();
          }
 
             break;
-	  
+
 	  //Add a new record to Coupons table
 	  case "couponsCreate":
-		
+
 		$CPN_IMG = filter_var($_REQUEST['CPN_IMG'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
 		$CPN_Desc = filter_var($_REQUEST['CPN_Desc'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
-		
+
 
 		    //also need to make sure all of Coupons' records are present******
 		try {
@@ -123,7 +123,7 @@
 
             echo json_encode(array('message' => 'The image link: ' . $CPN_IMG . '  :  ' . $CPN_Desc .' was added to the database'));
          }
-         
+
          catch(PDOException $e)
          {
             echo $e->getMessage();
@@ -131,12 +131,12 @@
 
             break;
 
-     
+
 
 	 // Update an existing record in the Vendors table
       case "updateVendors":
 
-         // Sanitise  
+         // Sanitise
 		 $VEN_Name       = filter_var($_REQUEST['VEN_Name'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
          $VEN_Address    = filter_var($_REQUEST['VEN_Address'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
          $VEN_Address2   = filter_var($_REQUEST['VEN_Address2'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
@@ -149,11 +149,11 @@
          $VEN_Desc       = filter_var($_REQUEST['VEN_Desc'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
          $VEN_OPN        = filter_var($_REQUEST['VEN_OPN'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
          $VEN_CLS        = filter_var($_REQUEST['VEN_CLS'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
-		 
+
          // Run PDO
          try {
             $sql  = "UPDATE Vendors SET VEN_Name = :VEN_Name, VEN_Address = :VEN_Address, VEN_Address2 = :VEN_Address2,
-            VEN_City = :VEN_City, VEN_State = :VEN_State, VEN_Zip = :VEN_Zip, VEN_Phone = :VEN_Phone, VEN_Web = :VEN_Web, 
+            VEN_City = :VEN_City, VEN_State = :VEN_State, VEN_Zip = :VEN_Zip, VEN_Phone = :VEN_Phone, VEN_Web = :VEN_Web,
             VEN_Price = :VEN_Price, VEN_Desc = :VEN_Desc, VEN_OPN = :VEN_OPN, VEN_CLS = :VEN_CLS  WHERE id = :VEN_ID";
 
             $stmt =  $pdo->prepare($sql);
@@ -173,21 +173,21 @@
 
             echo json_encode('message'=> . $VEN_Name .' was updated');
          }
-         
+
          catch(PDOException $e)
          {
             echo $e->getMessage();
          }
 
       break;
-	  
+
 	   case "updateCategories":
 
-         // Sanitise  
+         // Sanitise
 		 $CAT_Type = filter_var($_REQUEST['CAT_Type'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
 		 $CAT_Desc = filter_var($_REQUEST['CAT_Desc'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
 		 $CAT_IMG = filter_var($_REQUEST['CAT_IMG'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
-		 
+
          // run PDO
          try {
             $sql  = "UPDATE Categories SET CAT_Type = :CAT_Type, CAT_Desc = :CAT_Desc, CAT_IMG = :CAT_IMG WHERE id = :CAT_ID";
@@ -199,22 +199,22 @@
 
             echo json_encode('message'=> . $CAT_Type . ' was updated');
          }
-         
+
          catch(PDOException $e)
          {
             echo $e->getMessage();
          }
 
       break;
-	  
+
 	   case "updateCoupons":
 
-         // Sanitise 
-         $CPN_IMG = filter_var($_REQUEST['CPN_IMG'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW); 
+         // Sanitise
+         $CPN_IMG = filter_var($_REQUEST['CPN_IMG'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
 		 $CPN_Desc = filter_var($_REQUEST['CPN_Desc'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
-		
-		 
-         // run PDO 
+
+
+         // run PDO
          try {
             $sql  = "UPDATE Coupons SET CPN_IMG = :CPN_IMG, CPN_Desc = :CPN_Desc WHERE id = :CPN_ID";
             $stmt =  $pdo->prepare($sql);
@@ -224,7 +224,7 @@
 
             echo json_encode('message'=> 'The Coupon: '. $CPN_Desc . ' was updated');
          }
-        
+
          catch(PDOException $e)
          {
             echo $e->getMessage();
@@ -238,7 +238,7 @@
       // Remove an existing record in the Vendors table
       case "deleteVendors":
 
-         // Sanitise 
+         // Sanitise
          $VEN_Name       = filter_var($_REQUEST['VEN_Name'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
          $VEN_Address    = filter_var($_REQUEST['VEN_Address'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
          $VEN_Address2   = filter_var($_REQUEST['VEN_Address2'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
@@ -261,7 +261,7 @@
 
             echo json_encode('message'=>'The vendor: ' . $VEN_Name . ' was removed');
          }
-        
+
          catch(PDOException $e)
          {
             echo $e->getMessage();
@@ -284,17 +284,17 @@
 
             echo json_encode('The category: ' . $CAT_Type . ' was removed');
          }
-            
+
          catch(PDOException $e)
          {
             echo $e->getMessage();
          }
 
              break;
-      
+
       case "deleteCoupons"
 
-        $CPN_IMG = filter_var($_REQUEST['CPN_IMG'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW); 
+        $CPN_IMG = filter_var($_REQUEST['CPN_IMG'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
 		$CPN_Desc = filter_var($_REQUEST['CPN_Desc'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
 
           try {
@@ -306,7 +306,7 @@
 
             echo json_encode('message'=>'The coupons: ' . $CPN_Desc . ' was removed');
          }
-            
+
          catch(PDOException $e)
          {
             echo $e->getMessage();
@@ -314,7 +314,7 @@
 
              break;
 
-      
+
 
    }
 
