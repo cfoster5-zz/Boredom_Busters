@@ -36,3 +36,12 @@ ion-content {
       background: -moz-linear-gradient(180deg, #88D1BC, #74E4FF); /* For Firefox 3.6 to 15 */
       background: linear-gradient(180deg, #88D1BC, #74E4FF); /* Standard syntax (must be last) */
   }
+
+    button {max-width: 50%;
+
+    }
+
+    @media only screen and
+    (max-width: 736px) {
+      button {max-width: 100%}
+    }
