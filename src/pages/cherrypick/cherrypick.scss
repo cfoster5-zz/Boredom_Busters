@@ -1,3 +1,56 @@
 page-cherrypick {
 
+
+
+  .buttons-more-page {
+
+    ion-card {
+      margin-bottom: 2em;
+    }
+
+    ion-card-content {
+      background-color: #F4F5F8;
+    }
+
+    ion-card img {
+      width: auto;
+      height: 44px;
+      display: block;
+      margin: 20px auto;
+    }
+
+
+    }
+
+  .title{text-align: center;
+    }
+
+  a{
+    text-decoration:none;
+  }
+
+  p{
+    font-family: Sinhala Sangam MN, "Arial";
+  }
+
+  ion-content {
+        background: #88D1BC; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(180deg, #88D1BC, #74E4FF); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(180deg, #88D1BC, #74E4FF); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(180deg, #88D1BC, #74E4FF); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(180deg, #88D1BC, #74E4FF); /* Standard syntax (must be last) */
+    }
+
+  button {max-width: 50%;
+          }
+
+  @media only screen and
+    (max-width: 736px) {
+      button {max-width: 100%}
+      }
+
+
+
+
+
 }
