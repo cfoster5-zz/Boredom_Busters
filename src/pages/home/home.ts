@@ -4,11 +4,27 @@ import { Component } from '@angular/core';
   templateUrl: 'home.html'
 })
 export class HomePage {
+
   items;
 
   constructor() {
     this.initializeItems();
   }
+
+
+  showsearch()
+  {
+  var x = document.getElementById('search');
+  if (x.style.display === 'none') {
+      x.style.display = 'block';
+  } else {
+      x.style.display = 'none';
+  }
+  };
+
+
+
+
 
   initializeItems() {
     this.items = [
