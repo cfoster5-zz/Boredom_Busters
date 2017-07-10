@@ -4,7 +4,7 @@
     <ion-row>
       <ion-col>
         <ion-buttons>
-          <button ion-button icon-only>
+          <button class="hidden" ion-button icon-only>
             <ion-icon name='arrow-back'></ion-icon>
           </button>
         </ion-buttons>
@@ -14,7 +14,7 @@
 
       <ion-col>
         <ion-buttons end>
-        <button ion-button end icon-only>
+        <button class="hidden" ion-button end icon-only>
           <ion-icon name='search'></ion-icon>
         </button>
       </ion-buttons>
@@ -23,6 +23,12 @@
   </ion-grid>
 </ion-navbar>
 </ion-header>
+
+<style>
+.hidden {
+     display:none;
+}
+</style>
 
 <ion-content class="grid-basic-page">
 <div padding>
@@ -33,7 +39,6 @@
 
     <p>Are you on the Boredom Busters team? Click the button below to make changes!</p>
     <br>
-    <a href="/pages/admin/admin.html">
-      <button ion-button color="light" block>Admin Tools</button></a>
+      <button ion-button color="light" (click)="admintools()" block>Admin Tools</button>
 </div>
 </ion-content>
