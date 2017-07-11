@@ -25,10 +25,10 @@ export class HomePage {
           return;
         }
         // Examine the text in the response
-        response.json().then((data) => {
+        response.json().then(function(data) {
           console.log(data);
           document.getElementById("Cat1").innerHTML = data[0].Cat_Type;
-          this.items = data;
+          //this.items = data;
         });
       }
     )

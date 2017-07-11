@@ -42,16 +42,10 @@ export class SignInPage {
         // Examine the text in the response
         response.json().then(function(data) {
           console.log(data);
-<<<<<<< HEAD
-          document.getElementById("dana").innerHTML = data[1].Cat_Type;
-          
-=======
-<<<<<<< HEAD
+
+         // document.getElementById("dana").innerHTML = data[1].Cat_Type;
           document.getElementById("dana").innerHTML = data[1].CAT_Type;
-=======
-          document.getElementById("dana").innerHTML = data[0].CPN_Desc;
->>>>>>> origin/master
->>>>>>> 928d40c5e613c2e7f3e46a7e7c1139d56695d886
+
         });
       }
     )
