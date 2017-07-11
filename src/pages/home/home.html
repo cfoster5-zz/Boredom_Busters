@@ -32,27 +32,28 @@
   <h2 class="heading">Table of Contents</h2>
 <ion-grid class="grid">
   <ion-row>
-    <ion-col>
-      <p id='Cat1' (click)="selectcategory()">Category 1</p>{{items}}
+    <ion-col >
+    
+      <p  (click)="selectcategory()">{{items[0] && items[0].CAT_Type}}</p>
     </ion-col>
     <ion-col>
-      <p>Category 2</p>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <p>Category 3</p>
-    </ion-col>
-    <ion-col>
-      <p>Category 4</p>
+      <p  (click)="selectcategory()">{{items[1] && items[1].CAT_Type}}</p>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-      <p>Category 5</p>
+      <p  (click)="selectcategory()">{{items[2] && items[2].CAT_Type}}</p>
     </ion-col>
     <ion-col>
-      <p>Category 6</p>
+      <p  (click)="selectcategory()">{{items[3] && items[3].CAT_Type}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p  (click)="selectcategory()">{{items[4] && items[4].CAT_Type}}</p>
+    </ion-col>
+    <ion-col>
+     <p  (click)="selectcategory()">{{items[5] && items[5].CAT_Type}}</p>
     </ion-col>
   </ion-row>
   </ion-grid>

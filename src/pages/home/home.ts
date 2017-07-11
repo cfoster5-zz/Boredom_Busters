@@ -9,26 +9,22 @@ import { VendorListPage } from '../vendorlist/vendorlist';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  
-  
-
-  items;
+  items = [];
 
   constructor(public navCtrl: NavController) {
-
+  
    fetch('http://34.210.2.173/Categories.php')
-    .then(
-      function(response) {
+    .then((response) => {
         if (response.status !== 200) {
           console.log('Looks like there was a problem. Status Code: ' +
             response.status);
           return;
         }
         // Examine the text in the response
-        response.json().then(function(data) {
+        response.json().then((data) => {
           console.log(data);
-          document.getElementById("Cat1").innerHTML = data[0].Cat_Type;
-          //this.items = data;
+         // document.getElementById("Cat1").innerHTML = data[0].Cat_Type;
+          this.items = data;
         });
       }
     )
