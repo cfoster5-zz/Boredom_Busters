@@ -12,6 +12,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { MorePage } from '../pages/more/more';
 import { SignInPage } from '../pages/signin/signin';
 import { SearchPage } from '../pages/search/search';
+import { SubcategoryPage } from '../pages/subcategory/subcategory';
 import { VendorListPage } from '../pages/vendorlist/vendorlist';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -28,6 +29,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MorePage,
     SignInPage,
     SearchPage,
+    SubcategoryPage,
     VendorListPage
   ],
   imports: [
@@ -46,6 +48,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MorePage,
     SignInPage,
     SearchPage,
+    SubcategoryPage,
     VendorListPage
   ],
   providers: [
