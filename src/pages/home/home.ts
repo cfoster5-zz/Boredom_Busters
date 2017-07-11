@@ -2,15 +2,15 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SearchPage } from '../search/search';
-import { VendorListPage } from '../vendorlist/vendorlist';
+import { SubcategoryPage } from '../subcategory/subcategory';
 
 
 @Component({
   templateUrl: 'home.html'
 })
 export class HomePage {
-  
-  
+
+
 
   items;
 
@@ -44,9 +44,9 @@ export class HomePage {
   }
 
   selectcategory() {
-      this.navCtrl.push(VendorListPage);
+      this.navCtrl.push(SubcategoryPage);
   }
-  
-  
+
+
 
 }

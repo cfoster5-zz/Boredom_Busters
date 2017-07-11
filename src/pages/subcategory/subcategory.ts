@@ -6,11 +6,11 @@ import { VendorListPage } from '../vendorlist/vendorlist';
 
 
 @Component({
-  templateUrl: 'home.html'
+  templateUrl: 'subcategory.html'
 })
-export class HomePage {
-  
-  
+export class SubcategoryPage {
+
+
 
   items;
 
@@ -43,10 +43,17 @@ export class HomePage {
       this.navCtrl.push(SearchPage);
   }
 
-  selectcategory() {
-      this.navCtrl.push(VendorListPage);
-  }
-  
-  
+  subcategory = [
+  'Arts',
+  'Lessons',
+  'Volunteer Opportunities',
+  'Homeschool Interests',
+  'Science and Technology',
+  'Theater and Entertainment'
+];
+
+categorySelected(item: string) {
+  console.log("Selected Item", item);
+}
 
 }
