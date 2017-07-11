@@ -27,7 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     MorePage,
     SignInPage,
-    SearchPage
+    SearchPage,
+    VendorListPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +45,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     MorePage,
     SignInPage,
-    SearchPage
+    SearchPage,
+    VendorListPage
   ],
   providers: [
     StatusBar,

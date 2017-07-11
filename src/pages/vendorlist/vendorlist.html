@@ -1,12 +1,12 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Lists</ion-title>
+    <ion-title class="vendortitle">Lists</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+    <button class="vendor" ion-item *ngFor="let item of items" (click)="itemSelected(item)">
       {{ item }}
     </button>
   </ion-list>
