@@ -39,11 +39,11 @@ export class SignInPage {
             response.status);
           return;
         }
-
         // Examine the text in the response
         response.json().then(function(data) {
           console.log(data);
-          document.getElementById("dana").innerHTML = data[0].CPN_Desc;
+          document.getElementById("dana").innerHTML = data[1].Cat_Type;
+          
         });
       }
     )
