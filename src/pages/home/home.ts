@@ -1,3 +1,4 @@
+//PUT PAGES HERE THAT YOU WANT TO GO TO OR ARE PULLING FROM
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SearchPage } from '../search/search';
@@ -15,7 +16,7 @@ export class HomePage {
   }
 
   showsearch() {
-      this.navCtrl.push(SearchPage);
+      this.navCtrl.setRoot(SearchPage);
   }
 
 }

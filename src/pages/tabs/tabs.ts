@@ -1,3 +1,4 @@
+//ADD PAGES HERE TO CREATE TABS
 import { Component } from '@angular/core';
 
 import { CouponsPage } from '../coupons/coupons';
@@ -10,6 +11,7 @@ import { MorePage } from '../more/more';
 })
 export class TabsPage {
 
+//ADD tab_Root = _____Page; TO CREATE TABS
   tab1Root = HomePage;
   tab2Root = CouponsPage;
   tab3Root = CherryPickPage;

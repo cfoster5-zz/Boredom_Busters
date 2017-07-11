@@ -1,6 +1,7 @@
+//PUT PAGES HERE THAT YOU WANT TO GO TO OR ARE PULLING FROM
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { AdminPage } from '../admin/admin';
+import { SignInPage } from '../signin/signin';
 
 @Component({
   selector: 'page-more',
@@ -12,8 +13,9 @@ export class MorePage {
 
   }
 
-  admintools() {
-      this.navCtrl.push(AdminPage);
+//USE .push TO STACK AND GET BACK BUTTON OR .setRoot TO WORK AS NEW PAGE
+  signintools() {
+      this.navCtrl.push(SignInPage);
   }
 
 }
