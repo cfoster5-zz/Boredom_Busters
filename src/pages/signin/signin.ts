@@ -43,7 +43,7 @@ export class SignInPage {
         // Examine the text in the response
         response.json().then(function(data) {
           console.log(data);
-          document.getElementById("dana").innerHTML = data[0].CAT_Type;
+          document.getElementById("dana").innerHTML = data[0].CPN_Desc;
         });
       }
     )
