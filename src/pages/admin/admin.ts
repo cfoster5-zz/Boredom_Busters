@@ -36,14 +36,6 @@ export class AdminPage {
 
 
   /*-------------------------*/
-    /*fetch('http://34.210.2.173/Vendors.php')
-    .then(
-    function (data) {
-    //pull dummy data from php vendors
-    document.getElementById("chadd").innerHTML = data ;
-
-    console.log('Request succeeded with JSON response', data);
-  });*/
 
   }
 
