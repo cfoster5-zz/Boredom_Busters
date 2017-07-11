@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SearchPage } from '../search/search';
+import { VendorListPage } from '../vendorlist/vendorlist';
 
 
 @Component({
@@ -16,7 +17,11 @@ export class HomePage {
   }
 
   showsearch() {
-      this.navCtrl.setRoot(SearchPage);
+      this.navCtrl.push(SearchPage);
+  }
+
+  selectcategory() {
+      this.navCtrl.push(VendorListPage);
   }
 
 }
