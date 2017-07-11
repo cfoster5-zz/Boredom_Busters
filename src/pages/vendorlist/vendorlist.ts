@@ -1,5 +1,8 @@
+//PUT PAGES HERE THAT YOU WANT TO GO TO OR ARE PULLING FROM
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SearchPage } from '../search/search';
+import { VendorPage } from '../vendor/vendor';
 
 @Component({
   selector: 'page-vendorlist',
@@ -31,8 +34,9 @@ export class VendorListPage {
   'Halo'
 ];
 
-itemSelected(item: string) {
+selectvendor(item: string) {
   console.log("Selected Item", item);
+  this.navCtrl.push(VendorPage);
 }
 
 }
