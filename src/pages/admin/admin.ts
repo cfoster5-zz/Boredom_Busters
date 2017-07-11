@@ -22,6 +22,7 @@ export class AdminPage {
       response.json().then(function(data) {
         console.log(data);
         document.getElementById("chadd").innerHTML = data[0].VEN_Name;
+        document.getElementById("chadd").innerHTML = data[1].VEN_Desc;
       });
     }
   )
