@@ -20,7 +20,7 @@ export class VendorPage {
        // Examine the text in the response
        response.json().then((data) => {
          console.log(data);
-         document.getElementById("vendor1").innerHTML = data[0].VEN_Name;
+         document.getElementById("VENName").innerHTML = data[0].VEN_Name;
          //this.items = data;
        });
      }
