@@ -14,6 +14,8 @@ import { SignInPage } from '../pages/signin/signin';
 import { SearchPage } from '../pages/search/search';
 import { SubcategoryPage } from '../pages/subcategory/subcategory';
 import { VendorListPage } from '../pages/vendorlist/vendorlist';
+import { VendorPage } from '../pages/vendor/vendor';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,7 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SignInPage,
     SearchPage,
     SubcategoryPage,
-    VendorListPage
+    VendorListPage,
+    VendorPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SignInPage,
     SearchPage,
     SubcategoryPage,
-    VendorListPage
+    VendorListPage,
+    VendorPage
   ],
   providers: [
     StatusBar,

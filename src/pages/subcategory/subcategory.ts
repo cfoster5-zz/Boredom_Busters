@@ -52,8 +52,9 @@ export class SubcategoryPage {
   'Theater and Entertainment'
 ];
 
-categorySelected(item: string) {
+selectsubcategory(item: string) {
   console.log("Selected Item", item);
+  this.navCtrl.push(VendorListPage);
 }
 
 }
