@@ -9,6 +9,8 @@ export class VendorPage {
 
   constructor(public navCtrl: NavController) {
 
+
+
   }
 
 
