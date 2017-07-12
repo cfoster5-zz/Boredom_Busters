@@ -25,6 +25,7 @@ export class HomePage {
           console.log(data);
          // document.getElementById("Cat1").innerHTML = data[0].Cat_Type;
           this.items = data;
+          JSON.stringify(this.items);
         });
       }
     )
