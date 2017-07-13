@@ -42,7 +42,7 @@ export class SubcategoryPage {
      
    
    console.log(this.navParams.get("CAT_Type"));
-   
+   document.getElementById("subCat").innerHTML = this.navParams.get("CAT_Type")
   }  
  
 

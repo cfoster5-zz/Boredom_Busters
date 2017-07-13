@@ -41,7 +41,7 @@ export class HomePage {
   showsearch() {
       this.navCtrl.push(SearchPage);
   }
-
+    // Possibly going to have to write a function for each category, or one function w/ conditions 
   selectcategory() {
   /*  let data = {
       title: "test title",
