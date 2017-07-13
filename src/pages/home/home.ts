@@ -55,25 +55,5 @@ export class HomePage {
       //let item = this.categories[0];
         this.navCtrl.push(SubcategoryPage, category);
     }
- selectcategory2() {
-      let item = this.categories[1];
-        this.navCtrl.push(SubcategoryPage, item);
-    }
-selectcategory3() {
-      let item = this.categories[2];
-        this.navCtrl.push(SubcategoryPage, item);
-    }
-selectcategory4() {
-      let item = this.categories[3];
-        this.navCtrl.push(SubcategoryPage, item);
-    }
-selectcategory5() {
-      let item = this.categories[4];
-        this.navCtrl.push(SubcategoryPage, item);
-    }
-selectcategory6() {
-      let item = this.categories[5];
-        this.navCtrl.push(SubcategoryPage, item);
-    }
-
+ 
 }

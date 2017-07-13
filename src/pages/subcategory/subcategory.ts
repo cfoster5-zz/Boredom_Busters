@@ -10,9 +10,10 @@ import { HomePage } from '../home/home';
   templateUrl: 'subcategory.html'
 })
 export class SubcategoryPage {
-
+  CAT_Type;
   items = [];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.CAT_Type =this.navParams.get("CAT_Type");
     console.log("SubcategoryPage",this.navParams)//url?name=value&name=value&...
    fetch('http://34.210.2.173/Subcategories.php?SUBCAT_MASTER='+this.navParams.get('CAT_ID'))
     .then((response) => {
