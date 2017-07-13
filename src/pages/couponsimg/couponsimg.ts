@@ -2,13 +2,12 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SearchPage } from '../search/search';
-import { Couponsimg } from '../couponsimg/couponsimg';
 
 @Component({
   selector: 'page-coupons',
   templateUrl: 'coupons.html'
 })
-export class CouponsPage {
+export class CouponsimgPage {
 
 //empty arrays
 coupons = [];
@@ -63,8 +62,5 @@ constructor(public navCtrl: NavController) {
       this.navCtrl.push(SearchPage);
   }
 
-  selectvendorcoupon() {
-      this.navCtrl.push(Couponsimg);
-  }
 
 }
