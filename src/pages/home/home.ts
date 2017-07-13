@@ -19,8 +19,8 @@ export class HomePage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  
-    
+
+
 
    fetch('http://34.210.2.173/Categories.php')
     .then((response) => {
@@ -50,10 +50,10 @@ export class HomePage {
   showsearch() {
       this.navCtrl.push(SearchPage);
   }
-    // Possibly going to have to write a function for each category, or one function w/ conditions 
+    // Possibly going to have to write a function for each category, or one function w/ conditions
   selectcategory(category) {
       //let item = this.categories[0];
         this.navCtrl.push(SubcategoryPage, category);
     }
- 
+
 }
