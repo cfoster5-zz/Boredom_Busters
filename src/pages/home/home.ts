@@ -42,21 +42,29 @@ export class HomePage {
       this.navCtrl.push(SearchPage);
   }
     // Possibly going to have to write a function for each category, or one function w/ conditions 
-  selectcategory() {
-  /*  let data = {
-      title: "test title",
-      desc: "test desc",
-     subcat: [
-        "subcat1",
-        "subcat2"
-        ]  
-    }; */
+  selectcategory1() {
       let item = this.items[0];
         this.navCtrl.push(SubcategoryPage, item);
-
-      
-  }
-
-
+    }
+ selectcategory2() {
+      let item = this.items[1];
+        this.navCtrl.push(SubcategoryPage, item);
+    }
+selectcategory3() {
+      let item = this.items[2];
+        this.navCtrl.push(SubcategoryPage, item);
+    }
+selectcategory4() {
+      let item = this.items[3];
+        this.navCtrl.push(SubcategoryPage, item);
+    }
+selectcategory5() {
+      let item = this.items[4];
+        this.navCtrl.push(SubcategoryPage, item);
+    }
+selectcategory6() {
+      let item = this.items[5];
+        this.navCtrl.push(SubcategoryPage, item);
+    }
 
 }
