@@ -1,6 +1,6 @@
 //PUT PAGES HERE THAT YOU WANT TO GO TO OR ARE PULLING FROM
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { SearchPage } from '../search/search';
 import { VendorPage } from '../vendor/vendor';
 
@@ -9,32 +9,42 @@ import { VendorPage } from '../vendor/vendor';
   templateUrl: 'vendorlist.html'
 })
 export class VendorListPage {
+  SUBCAT_NAME;
+  items = [];
+   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.SUBCAT_NAME =this.navParams.get("SUBCAT_NAME");
+    console.log("SubcategoryPage",this.navParams)//url?name=value&name=value&...
+   fetch('http://34.210.2.173/Vendors.php?SUBCAT_MASTER='+this.navParams.get('CAT_ID'))
+    .then((response) => {
+        if (response.status !== 200) {
+          console.log('Looks like there was a problem. Status Code: ' +
+            response.status);
+          return;
+        }
+        // Examine the text in the response
+        response.json().then((data) => {
+          //console.log(data);
+        
+          this.items = data;
+          
+        });
+      }
+    )
+    .catch(function(err) {
+      console.log('Fetch Error :-S', err);
+    
+    });
 
-  constructor(public navCtrl: NavController) {
 
-  }
+  } 
+   ionViewDidLoad(){
+     
+   
+   console.log(this.navParams.get("SUBCAT_NAME"));
+  
+  } 
 
-  items = [
-  'Pokémon Yellow',
-  'Super Metroid',
-  'Mega Man X',
-  'The Legend of Zelda',
-  'Pac-Man',
-  'Super Mario World',
-  'Street Fighter II',
-  'Half Life',
-  'Final Fantasy VII',
-  'Star Fox',
-  'Tetris',
-  'Donkey Kong III',
-  'GoldenEye 007',
-  'Doom',
-  'Fallout',
-  'GTA',
-  'Halo'
-];
-
-selectvendor(item: string) {
+selectvendor(item) {
   console.log("Selected Item", item);
   this.navCtrl.push(VendorPage);
 }

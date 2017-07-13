@@ -1,13 +1,13 @@
 <ion-header>
   <ion-navbar>
-    <ion-title class="vendortitle">Vendors from SubCAT_Name</ion-title>
+    <ion-title >{{ SUBCAT_NAME }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
     <button class="vendor" ion-item *ngFor="let item of items" (click)="selectvendor(item)">
-      {{ item }}
+      {{ item.SUBCAT_NAME }}
     </button>
   </ion-list>
 </ion-content>
