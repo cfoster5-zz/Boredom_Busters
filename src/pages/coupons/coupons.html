@@ -45,10 +45,10 @@
   </button>-->
     <ion-item *ngFor="let vendor of vendors" (click)="selectvendorcoupon()">
         <ion-thumbnail item-start>
-          <img src="{{ vendor.VEN_Img }}" />
+          <img src="{{vendor.VEN_Img}}" />
         </ion-thumbnail>
         <h2>{{vendor.VEN_Name}}</h2>
-        <!--<p *ngFor="let coupon of coupons">{{coupon.CPN_Desc}}</p>-->
+        <!--<p ngFor="let coupon of coupons">{{coupon.CPN_Desc}}</p>-->
         <button ion-button clear item-end>View</button>
       </ion-item>
 
