@@ -35,15 +35,23 @@
 </style>
 
 <ion-content>
+  <!--vendor is an object in the array, vendors is the array. array vendors is set in ts file-->
+  <button ion-item *ngFor="let vendor of vendors" (click)="selectcategory()">
+    <!--.VEN_NAME is an attribute of vendor-->
+    {{vendor.VEN_Name}}
+    <!--ng-src--->
+    <img src="{{vendor.VEN_Img}}" />
 
-    <ion-item>
+  </button>
+    <ion-item *ngFor="let vendor of vendors" (click)="selectcategory()">
         <ion-thumbnail item-start>
-          <ion-img id="VENIMG"></ion-img>
+          <img src="{{ vendor.VEN_Img }}" />
         </ion-thumbnail>
-        <h2 id="VENName"></h2>
-        <p id=CPNDesc></p>
+        <h2>{{vendor.VEN_Name}}</h2>
+        <p *ngFor="let coupon of coupons">{{coupon.CPN_Desc}}</p>
         <button ion-button clear item-end>View</button>
       </ion-item>
+
 
       <ion-item>
         <ion-thumbnail item-start>

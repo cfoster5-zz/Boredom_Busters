@@ -9,6 +9,10 @@ import { SearchPage } from '../search/search';
 })
 export class CouponsPage {
 
+//empty arrays
+coupons = [];
+vendors = [];
+
 constructor(public navCtrl: NavController) {
 
  fetch('http://34.210.2.173/Vendors.php')
@@ -20,10 +24,10 @@ constructor(public navCtrl: NavController) {
       }
       // Examine the text in the response
       response.json().then((data) => {
-        console.log(data);
-        document.getElementById("VENName").innerHTML = data[0].VEN_Name;
-        document.getElementById("VENIMG").innerHTML = data[0].VEN_Img;
-
+        console.log("Vendors",data);
+        //document.getElementById("VENName").innerHTML = data[0].VEN_Name;
+        //document.getElementById("VENIMG").innerHTML = data[0].VEN_Img;
+        this.vendors = data;
       });
     }
   )
@@ -41,9 +45,9 @@ constructor(public navCtrl: NavController) {
        }
        // Examine the text in the response
        response.json().then((data) => {
-         console.log(data);
-         document.getElementById("CPNDesc").innerHTML = data[0].CPN_Desc;
-
+         console.log("Coupons",data);
+         //document.getElementById("CPNDesc").innerHTML = data[0].CPN_Desc;
+         this.coupons = data;
        });
      }
    )
