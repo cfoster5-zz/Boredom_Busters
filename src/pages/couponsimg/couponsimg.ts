@@ -5,9 +5,9 @@ import { SearchPage } from '../search/search';
 
 @Component({
   selector: 'page-coupons',
-  templateUrl: 'coupons.html'
+  templateUrl: 'couponsimg.html'
 })
-export class CouponsimgPage {
+export class Couponsimg {
 
 //empty arrays
 coupons = [];

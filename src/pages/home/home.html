@@ -25,8 +25,8 @@
 <ion-content padding>
   <h2 class="heading">Table of Contents</h2>
  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="selectcategory()">
-      {{ item }}
+    <button ion-item *ngFor="let item of items" (click)="selectcategory(item)">
+      {{ item.CAT_Type }}
 
     </button>
   </ion-list>

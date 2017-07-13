@@ -1,6 +1,6 @@
 //PUT PAGES HERE THAT YOU WANT TO GO TO OR ARE PULLING FROM
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { SearchPage } from '../search/search';
 import { VendorListPage } from '../vendorlist/vendorlist';
 
@@ -10,14 +10,10 @@ import { VendorListPage } from '../vendorlist/vendorlist';
 })
 export class SubcategoryPage {
 
-
-
-
-
   items = [];
-  constructor(public navCtrl: NavController) {
-  
-   fetch('http://34.210.2.173/Categories.php')
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    console.log("SubcategoryPage",this.navParams)//url?name=value&name=value&...
+   fetch('http://34.210.2.173/Subcategories.php?SUBCAT_MASTER='+this.navParams.get('CAT_ID'))
     .then((response) => {
         if (response.status !== 200) {
           console.log('Looks like there was a problem. Status Code: ' +
@@ -37,7 +33,7 @@ export class SubcategoryPage {
     });
 
 
-  } 
+  }
 
   showsearch() {
       this.navCtrl.push(SearchPage);
