@@ -9,6 +9,14 @@ import { HomePage } from '../home/home';
 @Component({
   templateUrl: 'subcategory.html'
 })
+<<<<<<< HEAD
+export class SubcategoryPage {
+
+  items = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    console.log("SubcategoryPage",this.navParams)//url?name=value&name=value&...
+   fetch('http://34.210.2.173/Subcategories.php?SUBCAT_MASTER='+this.navParams.get('CAT_ID'))
+=======
 
 export class SubcategoryPage {
  
@@ -16,6 +24,7 @@ export class SubcategoryPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   
    fetch('http://34.210.2.173/Categories.php')
+>>>>>>> origin/master
     .then((response) => {
         if (response.status !== 200) {
           console.log('Looks like there was a problem. Status Code: ' +
@@ -37,6 +46,9 @@ export class SubcategoryPage {
     });
 
 
+<<<<<<< HEAD
+  }
+=======
   } 
  ionViewDidLoad(){
      
@@ -45,6 +57,7 @@ export class SubcategoryPage {
   document.getElementById("subCat").innerHTML = this.navParams.get("CAT_Type");
   }  
  
+>>>>>>> origin/master
 
   showsearch() {
       this.navCtrl.push(SearchPage);

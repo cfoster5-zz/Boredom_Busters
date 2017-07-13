@@ -50,6 +50,17 @@ export class HomePage {
   showsearch() {
       this.navCtrl.push(SearchPage);
   }
+<<<<<<< HEAD
+
+  selectcategory(item) {
+    console.log("selectcategory",item);
+      this.navCtrl.push(SubcategoryPage,item);
+
+
+  }
+
+
+=======
     // Possibly going to have to write a function for each category, or one function w/ conditions 
   selectcategory1() {
       let item = this.categories[0];
@@ -75,5 +86,6 @@ selectcategory6() {
       let item = this.categories[5];
         this.navCtrl.push(SubcategoryPage, item);
     }
+>>>>>>> origin/master
 
 }
