@@ -24,10 +24,38 @@
 
 <ion-content padding>
   <h2 class="heading">Table of Contents</h2>
+<ion-grid  class="grid">
+  <ion-row>
+    <ion-col *ngFor="let category of categories" col-6>
+      <img src="{{category.CAT_IMG}}"/>
+      <p (click)="selectcategory()">{{category.CAT_Type}}</p>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<!--    <ion-col>
+      <p (click)="selectcategory()">{{items[1] && items[1].CAT_Type}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p (click)="selectcategory()">{{items[2] && items[2].CAT_Type}}</p>
+    </ion-col>
+    <ion-col>
+      <p (click)="selectcategory()">{{items[3] && items[3].CAT_Type}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p (click)="selectcategory()">{{items[4] && items[4].CAT_Type}}</p>
+    </ion-col>
+    <ion-col>
+     <p (click)="selectcategory()">{{items[5] && items[5].CAT_Type}}</p>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
  <ion-list>
     <button ion-item *ngFor="let item of items" (click)="selectcategory()">
       {{ item }}
-
     </button>
-  </ion-list>
+  </ion-list>-->
 </ion-content>

@@ -1,5 +1,5 @@
 //PUT PAGES HERE THAT YOU WANT TO GO TO OR ARE PULLING FROM
-//from is html page 
+//from is html page
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SearchPage } from '../search/search';
@@ -11,7 +11,9 @@ import { SubcategoryPage } from '../subcategory/subcategory';
 })
 export class HomePage {
 
-  items = [];
+
+  //empty arrays
+  categories = [];
   constructor(public navCtrl: NavController) {
 
    fetch('http://34.210.2.173/Categories.php')
@@ -25,7 +27,7 @@ export class HomePage {
         response.json().then((data) => {
           console.log(data);
          // document.getElementById("Cat1").innerHTML = data[0].Cat_Type;
-          this.items = data;
+          this.categories = data;
 
         });
       }
