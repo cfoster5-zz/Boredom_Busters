@@ -1,6 +1,6 @@
 //PUT PAGES HERE THAT YOU WANT TO GO TO OR ARE PULLING FROM
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { SearchPage } from '../search/search';
 import { SubcategoryPage } from '../subcategory/subcategory';
 
@@ -11,8 +11,9 @@ import { SubcategoryPage } from '../subcategory/subcategory';
 export class HomePage {
 
   items = [];
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   
+    
    fetch('http://34.210.2.173/Categories.php')
     .then((response) => {
         if (response.status !== 200) {
@@ -25,6 +26,7 @@ export class HomePage {
           console.log(data);
          // document.getElementById("Cat1").innerHTML = data[0].Cat_Type;
           this.items = data;
+          
   
         });
       }
@@ -41,7 +43,18 @@ export class HomePage {
   }
 
   selectcategory() {
-      this.navCtrl.push(SubcategoryPage);
+  /*  let data = {
+      title: "test title",
+      desc: "test desc",
+     subcat: [
+        "subcat1",
+        "subcat2"
+        ]  
+    }; */
+      let item = this.items[0];
+        this.navCtrl.push(SubcategoryPage, item);
+
+      
   }
 
 
