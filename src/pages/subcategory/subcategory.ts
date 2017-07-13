@@ -24,7 +24,7 @@ export class SubcategoryPage {
         // Examine the text in the response
         response.json().then((data) => {
           //console.log(data);
-         //document.getElementById("head1").innerHTML = data[0].Cat_Type;
+        
           this.items = data;
           
         });
@@ -41,7 +41,7 @@ export class SubcategoryPage {
      
    
    console.log(this.navParams.get("CAT_Type"));
-  document.getElementById("subCat").innerHTML = this.navParams.get("CAT_Type");
+  
   }  
  
 
@@ -49,14 +49,14 @@ export class SubcategoryPage {
       this.navCtrl.push(SearchPage);
   }
 
-  subcategory = [
+  /*subcategory = [
   'Arts',
   'Lessons',
   'Volunteer Opportunities',
   'Homeschool Interests',
   'Science and Technology',
   'Theater and Entertainment'
-];
+]; */
 
 selectsubcategory(item: string) {
   console.log("Selected Item", item);

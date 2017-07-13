@@ -9,8 +9,8 @@
 
 <ion-content>
   <ion-list>
-    <button class="subcategory" ion-item *ngFor="let item of subcategory" (click)="selectsubcategory(item)">
-      {{ item }}
+    <button class="subcategory" ion-item *ngFor="let item of items" (click)="selectsubcategory(item)">
+      {{ item.SUBCAT_NAME }}
     </button>
   </ion-list>
 </ion-content>
