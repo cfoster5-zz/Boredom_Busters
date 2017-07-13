@@ -28,84 +28,8 @@
 
 </ion-header>
 
-<style>
-.hidden {
-     display:none;
-}
-</style>
-
 <ion-content>
-  <!--vendor is an object in the array, vendors is the array. array vendors is set in ts file-->
-  <!--<button ion-item *ngFor="let vendor of vendors" (click)="selectcategory()">-->
-    <!--.VEN_NAME is an attribute of vendor-->
-    <!--{{vendor.VEN_Name}}-->
-    <!--ng-src--->
-    <!--<img src="{{vendor.VEN_Img}}" />
 
-  </button>-->
-    <ion-item *ngFor="let vendor of vendors" (click)="selectvendorcoupon()">
-        <ion-thumbnail item-start>
           <img src="{{ vendor.VEN_Img }}" />
-        </ion-thumbnail>
-        <h2>{{vendor.VEN_Name}}</h2>
-        <p>hello>
-        <!--<p *ngFor="let coupon of coupons">{{coupon.CPN_Desc}}</p>-->
-        <button ion-button clear item-end>View</button>
-      </ion-item>
-
-
-    <!--  <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-rotla.png">
-        </ion-thumbnail>
-        <h2>Cold Stone Creamery</h2>
-        <p>Free kids ice cream with at least one A on your report card</p>
-        <button ion-button clear item-end>View</button>
-      </ion-item>
-
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-ghostbusters.png">
-        </ion-thumbnail>
-        <h2>Ghostbusters</h2>
-        <p>Ivan Reitman • 1984</p>
-        <button ion-button clear item-end>View</button>
-      </ion-item>
-
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-batman.png">
-        </ion-thumbnail>
-        <h2>Batman</h2>
-        <p>Tim Burton • 1988</p>
-        <button ion-button clear item-end>View</button>
-      </ion-item>
-
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-bttf.png">
-        </ion-thumbnail>
-        <h2>Back to the Future</h2>
-        <p>Robert Zemeckis • 1985</p>
-        <button ion-button clear item-end>View</button>
-      </ion-item>
-
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-esb.png">
-        </ion-thumbnail>
-        <h2>The Empire Strikes Back</h2>
-        <p>Irvin Kershner • 1980</p>
-        <button ion-button clear item-end>View</button>
-      </ion-item>
-
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-terminator.png">
-        </ion-thumbnail>
-        <h2>The Terminator</h2>
-        <p>James Cameron • 1984</p>
-        <button ion-button clear item-end>View</button>
-      </ion-item>-->
 
   </ion-content>
