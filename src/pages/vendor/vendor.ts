@@ -21,6 +21,7 @@ export class VendorPage {
        response.json().then((data) => {
          console.log(data);
          document.getElementById("VENName").innerHTML = data[0].VEN_Name;
+
          //this.items = data;
        });
      }
