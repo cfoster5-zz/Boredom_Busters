@@ -27,12 +27,12 @@
 </ion-header>
 
 <ion-content>
-<p>Today: VEN_OPN VEN_CLS</p>
-<ion-img>VEN_Img</ion-img>
-<p>VEN_Address VEN_Address2, VEN_City, VEN_State VEN_Zip</p>
-<p>VEN_Phone</p>
-<p>VEN_Web</p>
-<p>VEN_Price</p>
-<p>VEN_Desc</p>
-<p>put call here</p>
+<p><!--Today: -->{{ VEN_OPN }} {{ VEN_CLS }}</p>
+<img src="{{item.VEN_Name}}"/>
+<p>{{ VEN_Address }} {{ VEN_Address2 }}, {{ VEN_City }}, {{ VEN_State }} {{ VEN_Zip }}</p>
+<p>{{ VEN_Phone }}</p>
+<p>{{ VEN_Web }}</p>
+<p>{{ VEN_Price }}</p>
+<p>{{ VEN_Desc }}</p>
+<!--<p>put call here</p>-->
 </ion-content>
