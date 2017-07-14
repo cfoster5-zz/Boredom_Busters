@@ -28,9 +28,23 @@
 
 </ion-header>
 
-<ion-content>
-  <button ion-item *ngFor="let coupon of coupons">
-      <img src="{{ coupon.CPN_IMG }}"/>
-  </button>
 
+<style>
+.coupon {
+  margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%) }
+</style>
+
+<ion-content *ngFor="let coupon of coupons">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="{{ coupon.CPN_IMG }}"/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

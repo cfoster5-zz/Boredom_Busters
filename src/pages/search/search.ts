@@ -11,7 +11,7 @@ export class SearchPage {
 
   vendors = [];
 
-  items;
+  //items;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
@@ -26,7 +26,7 @@ export class SearchPage {
        response.json().then((data) => {
          console.log(data);
         // document.getElementById().innerHTML = data[0].VEN_Name;
-         this.items = data;
+         this.vendors = data;
 
        });
      }
@@ -39,17 +39,23 @@ export class SearchPage {
   }
 
 
-    getItems(ev) {
-      // Reset items back to all of the items
-      this.items();
+    //getvendors(ev) {
+    getvendors(vendors) {
+    //getvendors(data) {
+      // Reset vendors back to all of the items
+      this.vendors;
 
       // set val to the value of the ev target
-      var val = ev.target.value;
+      //var val = ev.target.value;
+      var val = vendors.target.value;
 
       // if the value is an empty string don't filter the items
       if (val && val.trim() != '') {
-        this.items = this.items.filter((item) => {
-          return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        this.vendors = this.vendors.filter((vendors) => {
+        
+          //return (vendor.toLowerCase().indexOf(val.toLowerCase()) > -1);
+          return (JSON.stringify(vendors));
+          //eturn (JSON.stringify(data));
         })
       }
     }
