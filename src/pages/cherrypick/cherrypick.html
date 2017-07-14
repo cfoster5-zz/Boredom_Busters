@@ -35,6 +35,7 @@
 
 <ion-content>
   <p>hello</p>
+  <!--<ion-item *ngFor="let vendor of vendors" (click)="selectcherryvendor(vendor)">-->
   <ion-item *ngFor="let vendor of vendors" (click)="selectcherryvendor(vendor)">
       <ion-thumbnail item-start>
         <img src="{{vendor.VEN_Img}}" />

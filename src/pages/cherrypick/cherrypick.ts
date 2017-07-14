@@ -1,6 +1,6 @@
 //PUT PAGES HERE THAT YOU WANT TO GO TO OR ARE PULLING FROM
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 import { SearchPage } from '../search/search';
 import { VendorPage } from '../vendor/vendor';
 
@@ -11,10 +11,11 @@ import { VendorPage } from '../vendor/vendor';
 export class CherryPickPage {
 
   vendors = [];
+  VEN_Cherry;
 
   constructor(public navCtrl: NavController) {
 //get VEN_NAME where VEN_CHERRY = 1
-    fetch('http://34.210.2.173/Vendors.php')
+    fetch('http://34.210.2.173/Vendors.php?VEN_Cherry=1')
      .then((response) => {
          if (response.status !== 200) {
            console.log('Looks like there was a problem. Status Code: ' +
@@ -35,6 +36,14 @@ export class CherryPickPage {
      });
 
   }
+
+  ionViewDidLoad(){
+
+    console.log("VEN_Name");
+
+
+  }
+
 
   showsearch() {
       this.navCtrl.push(SearchPage);
