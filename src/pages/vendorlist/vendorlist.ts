@@ -13,8 +13,8 @@ export class VendorListPage {
   items = [];
    constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.SUBCAT_NAME =this.navParams.get("SUBCAT_NAME");
-    console.log("SubcategoryPage",this.navParams)//url?name=value&name=value&...
-   fetch('http://34.210.2.173/Vendors.php?SUBCAT_MASTER='+this.navParams.get('CAT_ID'))
+    console.log("VendorListPage",this.navParams)//url?name=value&name=value&...
+   fetch('http://34.210.2.173/Vendors.php')
     .then((response) => {
         if (response.status !== 200) {
           console.log('Looks like there was a problem. Status Code: ' +
@@ -46,7 +46,7 @@ export class VendorListPage {
 
 selectvendor(item) {
   console.log("Selected Item", item);
-  this.navCtrl.push(VendorPage);
+  this.navCtrl.push(VendorPage, item);
 }
 
 }

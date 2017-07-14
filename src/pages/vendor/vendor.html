@@ -1,6 +1,7 @@
 <ion-header>
 
 <ion-navbar>
+     <ion-title >{{ VEN_Name }}</ion-title>
   <ion-grid>
     <ion-row>
       <ion-col>
@@ -11,7 +12,7 @@
         </ion-buttons>
       </ion-col>
 
-        <ion-title >{{ VEN_Name }}</ion-title>
+     
 
       <ion-col>
         <ion-buttons end>
@@ -27,12 +28,11 @@
 </ion-header>
 
 <ion-content>
-<p><!--Today: -->{{ VEN_OPN }} {{ VEN_CLS }}</p>
-<img src="{{item.VEN_Name}}"/>
+<p> {{ VEN_OPN }} {{ VEN_CLS }}</p>
+<img src="{{VEN_IMG}}"/>
 <p>{{ VEN_Address }} {{ VEN_Address2 }}, {{ VEN_City }}, {{ VEN_State }} {{ VEN_Zip }}</p>
 <p>{{ VEN_Phone }}</p>
 <p>{{ VEN_Web }}</p>
 <p>{{ VEN_Price }}</p>
 <p>{{ VEN_Desc }}</p>
-<!--<p>put call here</p>-->
-</ion-content>
+</ion-content> 
