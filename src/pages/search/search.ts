@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { VendorPage } from '../vendor/vendor';
 
 
@@ -9,9 +9,11 @@ import { VendorPage } from '../vendor/vendor';
 })
 export class SearchPage {
 
+  vendors = [];
+
   items;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   fetch('http://34.210.2.173/Vendors.php')
    .then((response) => {
@@ -53,8 +55,8 @@ export class SearchPage {
     }
 
 
-    selectvendor() {
-        this.navCtrl.push(VendorPage);
+    selectvendor(vendor) {
+        this.navCtrl.push(VendorPage, vendor);
     }
 
 

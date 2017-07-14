@@ -25,26 +25,26 @@ export class SubcategoryPage {
         // Examine the text in the response
         response.json().then((data) => {
           //console.log(data);
-        
+
           this.items = data;
-          
+
         });
       }
     )
     .catch(function(err) {
       console.log('Fetch Error :-S', err);
-    
+
     });
 
 
-  } 
+  }
  ionViewDidLoad(){
-     
-   
+
+
    console.log(this.navParams.get("CAT_Type"));
-  
-  }  
- 
+
+  }
+
 
   showsearch() {
       this.navCtrl.push(SearchPage);
