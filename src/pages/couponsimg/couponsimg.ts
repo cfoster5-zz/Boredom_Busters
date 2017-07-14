@@ -18,6 +18,7 @@ constructor(public navCtrl: NavController, public navParams: NavParams) {
   this.CPN_IMG =this.navParams.get("CPN_IMG");
   console.log("Couponsimg",this.navParams)
   fetch('http://34.210.2.173/Coupons.php?CPN_Master='+this.navParams.get('VEN_ID'))
+  //show ven_id to see if it pulls from button click
   //fetch('http://34.210.2.173/Coupons.php')
    .then((response) => {
        if (response.status !== 200) {
@@ -42,7 +43,7 @@ constructor(public navCtrl: NavController, public navParams: NavParams) {
 ionViewDidLoad(){
 
 
-  console.log(this.navParams.get("CPN_Desc"));
+  console.log(this.navParams.get("CPN_IMG"));
 
 }
 
