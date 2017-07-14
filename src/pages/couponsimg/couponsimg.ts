@@ -1,6 +1,6 @@
 //PUT PAGES HERE THAT YOU WANT TO GO TO OR ARE PULLING FROM
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { SearchPage } from '../search/search';
 
 @Component({
@@ -9,34 +9,13 @@ import { SearchPage } from '../search/search';
 })
 export class Couponsimg {
 
-//empty arrays
+CPN_Desc;
 coupons = [];
-vendors = [];
 
-constructor(public navCtrl: NavController) {
-
- fetch('http://34.210.2.173/Vendors.php')
-  .then((response) => {
-      if (response.status !== 200) {
-        console.log('Looks like there was a problem. Status Code: ' +
-          response.status);
-        return;
-      }
-      // Examine the text in the response
-      response.json().then((data) => {
-        console.log("Vendors",data);
-        //document.getElementById("VENName").innerHTML = data[0].VEN_Name;
-        //document.getElementById("VENIMG").innerHTML = data[0].VEN_Img;
-        this.vendors = data;
-      });
-    }
-  )
-  .catch(function(err) {
-    console.log('Fetch Error :-S', err);
-  });
-
-
-  fetch('http://34.210.2.173/Coupons.php')
+constructor(public navCtrl: NavController, public navParams: NavParams) {
+  this.CPN_Desc =this.navParams.get("CPN_Desc");
+  console.log("Couponsimg",this.navParams)
+  fetch('http://34.210.2.173/Coupons.php?CPN_MASTER='+this.navParams.get('VEN_ID'))
    .then((response) => {
        if (response.status !== 200) {
          console.log('Looks like there was a problem. Status Code: ' +
@@ -45,7 +24,7 @@ constructor(public navCtrl: NavController) {
        }
        // Examine the text in the response
        response.json().then((data) => {
-         console.log("Coupons",data);
+         //console.log("Coupons",data);
          //document.getElementById("CPNDesc").innerHTML = data[0].CPN_Desc;
          this.coupons = data;
        });
@@ -57,6 +36,13 @@ constructor(public navCtrl: NavController) {
 
 
 }
+ionViewDidLoad(){
+
+
+  console.log(this.navParams.get("CPN_Desc"));
+
+ }
+
 
   showsearch() {
       this.navCtrl.push(SearchPage);

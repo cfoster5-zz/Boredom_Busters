@@ -1,6 +1,6 @@
 //PUT PAGES HERE THAT YOU WANT TO GO TO OR ARE PULLING FROM
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { SearchPage } from '../search/search';
 import { Couponsimg } from '../couponsimg/couponsimg';
 
@@ -14,7 +14,7 @@ export class CouponsPage {
 coupons = [];
 vendors = [];
 
-constructor(public navCtrl: NavController) {
+constructor(public navCtrl: NavController, public navParams: NavParams) {
 
  fetch('http://34.210.2.173/Vendors.php')
   .then((response) => {
@@ -25,7 +25,7 @@ constructor(public navCtrl: NavController) {
       }
       // Examine the text in the response
       response.json().then((data) => {
-        console.log("Vendors",data);
+        console.log(/*"Vendors",*/data);
         //document.getElementById("VENName").innerHTML = data[0].VEN_Name;
         //document.getElementById("VENIMG").innerHTML = data[0].VEN_Img;
         this.vendors = data;
@@ -46,7 +46,7 @@ constructor(public navCtrl: NavController) {
        }
        // Examine the text in the response
        response.json().then((data) => {
-         console.log("Coupons",data);
+         console.log(/*"Coupons",*/data);
          //document.getElementById("CPNDesc").innerHTML = data[0].CPN_Desc;
          this.coupons = data;
        });
@@ -63,8 +63,8 @@ constructor(public navCtrl: NavController) {
       this.navCtrl.push(SearchPage);
   }
 
-  selectvendorcoupon() {
-      this.navCtrl.push(Couponsimg);
+  selectvendorcoupon(vendor) {
+      this.navCtrl.push(Couponsimg, vendor);
   }
 
 }
