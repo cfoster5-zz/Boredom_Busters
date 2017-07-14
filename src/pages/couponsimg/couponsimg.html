@@ -29,7 +29,8 @@
 </ion-header>
 
 <ion-content>
-
-{{ coupon.CPN_Desc }}
+  <button ion-item *ngFor="let coupon of coupons">
+      {{ CPN_Desc }}
+  </button>
 
 </ion-content>

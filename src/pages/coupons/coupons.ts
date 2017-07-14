@@ -14,7 +14,7 @@ export class CouponsPage {
 coupons = [];
 vendors = [];
 
-constructor(public navCtrl: NavController, public navParams: NavParams) {
+constructor(public navCtrl: NavController/*, public navParams: NavParams*/) {
 
  fetch('http://34.210.2.173/Vendors.php')
   .then((response) => {
