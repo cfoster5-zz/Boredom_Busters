@@ -39,12 +39,12 @@ constructor(public navCtrl: NavController, public navParams: NavParams) {
 
 
 }
-/*ionViewDidLoad(){
+ionViewDidLoad(){
 
 
   console.log(this.navParams.get("CPN_Desc"));
 
-} */
+}
 
 
   showsearch() {
