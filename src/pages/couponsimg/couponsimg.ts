@@ -9,13 +9,16 @@ import { SearchPage } from '../search/search';
 })
 export class Couponsimg {
 
-CPN_Desc;
+//CPN_Desc;
+CPN_IMG;
 coupons = [];
 
 constructor(public navCtrl: NavController, public navParams: NavParams) {
-  this.CPN_Desc =this.navParams.get("CPN_Desc");
+  //this.CPN_Desc =this.navParams.get("CPN_Desc");
+  this.CPN_IMG =this.navParams.get("CPN_IMG");
   console.log("Couponsimg",this.navParams)
-  fetch('http://34.210.2.173/Coupons.php?CPN_MASTER='+this.navParams.get('VEN_ID'))
+  fetch('http://34.210.2.173/Coupons.php?CPN_Master='+this.navParams.get('VEN_ID'))
+  //fetch('http://34.210.2.173/Coupons.php')
    .then((response) => {
        if (response.status !== 200) {
          console.log('Looks like there was a problem. Status Code: ' +
@@ -36,12 +39,12 @@ constructor(public navCtrl: NavController, public navParams: NavParams) {
 
 
 }
-ionViewDidLoad(){
+/*ionViewDidLoad(){
 
 
   console.log(this.navParams.get("CPN_Desc"));
 
- }
+} */
 
 
   showsearch() {
