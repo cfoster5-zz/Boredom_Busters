@@ -15,7 +15,7 @@ export class CherryPickPage {
 
   constructor(public navCtrl: NavController) {
 //get VEN_NAME where VEN_CHERRY = 1
-    fetch('http://34.210.2.173/Vendors.php?VEN_Cherry=1')
+    fetch('http://34.210.2.173/Vendors.php')
      .then((response) => {
          if (response.status !== 200) {
            console.log('Looks like there was a problem. Status Code: ' +
@@ -37,12 +37,12 @@ export class CherryPickPage {
 
   }
 
-  ionViewDidLoad(){
+  /*ionViewDidLoad(){
 
     console.log("VEN_Name");
 
 
-  }
+  }*/
 
 
   showsearch() {
