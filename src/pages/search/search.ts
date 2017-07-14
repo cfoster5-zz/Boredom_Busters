@@ -52,7 +52,7 @@ export class SearchPage {
       // if the value is an empty string don't filter the items
       if (val && val.trim() != '') {
         this.vendors = this.vendors.filter((vendors) => {
-        
+
           //return (vendor.toLowerCase().indexOf(val.toLowerCase()) > -1);
           return (JSON.stringify(vendors));
           //eturn (JSON.stringify(data));
