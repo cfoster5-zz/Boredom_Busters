@@ -27,6 +27,7 @@
 </ion-header>
 <ion-content>
   <ion-list *ngFor="let vendor of vendors" (click)="selectcherryvendor(vendor)">
+<!--*ngif filters rows shown in vendor table on load-->
       <ion-item *ngIf="vendor.VEN_Cherry === '1'">
         <ion-thumbnail item-start>
           <img src="{{vendor.VEN_Img}}" />
