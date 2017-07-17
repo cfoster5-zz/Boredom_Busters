@@ -29,11 +29,7 @@
 </ion-header>
 
 <ion-content *ngFor="let coupon of coupons">
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <img padding class="couponimage" src="{{coupon.CPN_IMG }}"/>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div padding class="couponimage">
+    <img src="{{coupon.CPN_IMG }}"/>
+  </div>
 </ion-content>

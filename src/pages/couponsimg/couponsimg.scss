@@ -1,3 +1,24 @@
-.couponimage {
-      vertical-align: middle;
-  }
+//cell
+    @media only screen and
+      (max-width: 736px) {
+        .couponimage {
+            display: block;
+            margin-left: 18%;
+            margin-top: 50%;
+            height: auto;
+            width:100%;
+          }
+        }
+
+//comp
+        @media only screen and
+          (max-width: 3000px) and (min-width: 737px) {
+            .couponimage {
+              //display: block;
+              margin-left: 42%;
+              margin-top: 15%;
+              //height: auto;
+              width:100%;
+
+              }
+          }
