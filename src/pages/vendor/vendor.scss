@@ -6,12 +6,25 @@ page-vendor {
 .header1{
     font-size: 150%;
     font-weight: bold;
-    color: #ff7f50;
+    //color: #ff7f50;
 }
 
 .p1{
-    font-weight: bold; 
-    font-style: italic;
-    font-size: 90%;
+    font-weight: bold;
+    //font-style: italic;
+    //font-size: 90%;
     color: black;
+    text-align: center;
+}
+.description{
+  font-weight: bold;
+  color: black;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-bottom: 30%;
+  padding-left: 2%;
+  padding-right: 2%
 }
