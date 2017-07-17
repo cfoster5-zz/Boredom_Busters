@@ -26,13 +26,13 @@
 </ion-navbar>
 </ion-header>
 <ion-content>
-  <p>hello</p>
-  <!--<ion-item *ngFor="let vendor of vendors" (click)="selectcherryvendor(vendor)">-->
-  <ion-item *ngFor="let vendor of vendors" ng-if="vendor.VEN_Cherry == '1'" (click)="selectcherryvendor(vendor)">
-      <ion-thumbnail item-start>
-        <img src="{{vendor.VEN_Img}}" />
-      </ion-thumbnail>
-      <h2>{{vendor.VEN_Name}}</h2>
-      <p>{{vendor.VEN_Cherry}}</p>
-    </ion-item>
+  <ion-list *ngFor="let vendor of vendors" (click)="selectcherryvendor(vendor)">
+      <ion-item *ngIf="vendor.VEN_Cherry === '1'">
+        <ion-thumbnail item-start>
+          <img src="{{vendor.VEN_Img}}" />
+        </ion-thumbnail>
+        <h2>{{vendor.VEN_Name}}</h2>
+        {{vendor.VEN_Desc}}
+      </ion-item>
+    </ion-list>
 </ion-content>
