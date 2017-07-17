@@ -33,5 +33,8 @@
         <img src="{{vendor.VEN_Img}}" />
       </ion-thumbnail>
       <h2>{{vendor.VEN_Name}}</h2>
+      <div ng-if="vendor.VEN_Cherry == '1'">
+            <p> {{vendor.VEN_Cherry}}</p>
+        </div>
     </ion-item>
 </ion-content>
