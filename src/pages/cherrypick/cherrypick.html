@@ -29,11 +29,11 @@
   <ion-list *ngFor="let vendor of vendors" (click)="selectcherryvendor(vendor)">
 <!--*ngif filters rows shown in vendor table on load-->
       <ion-item *ngIf="vendor.VEN_Cherry === '1'">
-        <ion-thumbnail item-start>
-          <img src="{{vendor.VEN_Img}}" />
-        </ion-thumbnail>
+        <!--<ion-thumbnail class="thumbnail" item-start>-->
+          <img class="thumbnail" src="{{vendor.VEN_Img}}" />
+        <!--</ion-thumbnail>-->
         <h2>{{vendor.VEN_Name}}</h2>
-        {{vendor.VEN_Desc}}
+        <p>{{vendor.VEN_Desc}}</p>
       </ion-item>
     </ion-list>
 </ion-content>

@@ -49,6 +49,21 @@ page-cherrypick {
       button {max-width: 100%}
       }
 
+      //cell
+          @media only screen and
+            (max-width: 736px) {
+              .thumbnail {width: 14%;
+                          float: left;
+                          margin-right: 2%;}
+              }
+
+      //comp
+              @media only screen and
+                (max-width: 3000px) and (min-width: 737px) {
+                  .thumbnail {width: 5%;
+                              float: left;
+                              margin-right: 2%;}
+                }
 
 
 

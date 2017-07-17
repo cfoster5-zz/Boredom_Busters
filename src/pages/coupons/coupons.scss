@@ -1,16 +1,15 @@
-.grid-basic-page {
+//cell
+    @media only screen and
+      (max-width: 736px) {
+        .thumbnail {width: 14%;
+                    float: left;
+                    margin-right: 2%;}
+        }
 
-  ion-col div {
-    background-color: #f0f5ff;
-    border: 1px solid #e6e9ee;
-    border-radius: 2px;
-    padding: 5px;
-    text-align: center;
-  }
-
-  p {
-    padding: 10px 0 0 10px !important;
-    margin: 0;
-  }
-
-}
+//comp
+        @media only screen and
+          (max-width: 3000px) and (min-width: 737px) {
+            .thumbnail {width: 5%;
+                        float: left;
+                        margin-right: 2%;}
+          }
