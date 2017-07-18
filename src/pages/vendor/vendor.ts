@@ -33,7 +33,7 @@ export class VendorPage {
     this.VEN_Phone = this.navParams.get("VEN_Phone");
     this.VEN_Web = this.navParams.get("VEN_Web");
     this.VEN_Price = this.navParams.get("VEN_Price");
-    this.VEN_Desc = this.navParams.get("VEN_Phone");
+    this.VEN_Desc = this.navParams.get("VEN_Desc");
     console.log("SubcategoryPage",this.navParams)//url?name=value&name=value&...
    fetch('http://34.210.2.173/Subcategories.php?SUBCAT_MASTER='+this.navParams.get('CAT_ID'))
     .then((response) => {
