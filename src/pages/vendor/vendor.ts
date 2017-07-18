@@ -26,7 +26,7 @@ export class VendorPage {
     this.VEN_CLS = this.navParams.get("VEN_CLS");
     this.VEN_Img = this.navParams.get("VEN_Img");
     this.VEN_Address = this.navParams.get("VEN_Address");
-    this.VEN_Address2 = this.navParams.get("VEN_Adress2");
+    this.VEN_Address2 = this.navParams.get("VEN_Address2");
     this.VEN_City = this.navParams.get("VEN_City");
     this.VEN_State = this.navParams.get("VEN_State");
     this.VEN_Zip = this.navParams.get("VEN_Zip");
