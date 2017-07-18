@@ -9,6 +9,7 @@ export class VendorPage {
   VEN_Name;
   VEN_OPN;
   VEN_CLS;
+  VEN_Img;
   VEN_Address;
   VEN_Address2;
   VEN_City;
@@ -23,6 +24,7 @@ export class VendorPage {
     this.VEN_Name = this.navParams.get("VEN_Name");
     this.VEN_OPN = this.navParams.get("VEN_OPN");
     this.VEN_CLS = this.navParams.get("VEN_CLS");
+    this.VEN_Img = this.navParams.get("VEN_Img");
     this.VEN_Address = this.navParams.get("VEN_Address");
     this.VEN_Address2 = this.navParams.get("VEN_Adress2");
     this.VEN_City = this.navParams.get("VEN_City");

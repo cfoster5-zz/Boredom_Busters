@@ -48,9 +48,7 @@
           <img class="thumbnail" src="{{vendor.VEN_Img}}" />
         <!--</ion-thumbnail>-->
         <h2>{{vendor.VEN_Name}}</h2>
-        <p>text</p>
-
-        <!--<p ngFor="let coupon of coupons">{{coupon.CPN_Desc}}</p>-->
+        <p *ngFor="let coupon of coupons">{{coupon.CPN_Desc}}</p>
       </ion-item>
 
 

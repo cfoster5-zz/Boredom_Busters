@@ -28,3 +28,28 @@ page-vendor {
   padding-left: 2%;
   padding-right: 2%
 }
+
+//cell
+    @media only screen and
+      (max-width: 736px) {
+        .vendorimage {
+            display: block;
+            margin-left: 30%;
+            margin-top: 5%;
+            height: auto;
+            width:40%;
+          }
+        }
+
+//comp
+        @media only screen and
+          (max-width: 3000px) and (min-width: 737px) {
+            .vendorimage {
+              //display: block;
+              margin-left: 42%;
+              margin-top: 15%;
+              //height: auto;
+              width:100%;
+
+              }
+          }
