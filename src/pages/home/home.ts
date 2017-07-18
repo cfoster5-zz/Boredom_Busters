@@ -53,7 +53,12 @@ export class HomePage {
     // Possibly going to have to write a function for each category, or one function w/ conditions
   selectcategory(category) {
       //let item = this.categories[0];
+      //if category has a subcategory
+      //if CAT_ID of category object does not equal
         this.navCtrl.push(SubcategoryPage, category);
+
+      //if category doesnt have a subcategory
+        //this.navCtrl.push(VendorListPage, category);
     }
 
 }

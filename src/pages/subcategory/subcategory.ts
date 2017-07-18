@@ -11,6 +11,7 @@ import { HomePage } from '../home/home';
 })
 export class SubcategoryPage {
   CAT_Type;
+  SUBCAT_MASTER;
   items = [];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.CAT_Type =this.navParams.get("CAT_Type");
@@ -38,10 +39,19 @@ export class SubcategoryPage {
 
 
   }
- ionViewDidLoad(){
 
+ ionViewDidLoad(item){
+   //this.items is the subcategory array
+   /*if (this.navParams.get("SUBCAT_MASTER") != this.navParams.get("CAT_ID"))
+   {
+     this.navCtrl.push(VendorListPage,item);
 
-   console.log(this.navParams.get("CAT_Type"));
+   }
+   else {*/
+     console.log(this.navParams.get("CAT_Type"));
+
+  // }
+
 
   }
 

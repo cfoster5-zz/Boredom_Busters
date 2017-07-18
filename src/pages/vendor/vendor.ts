@@ -26,14 +26,14 @@ export class VendorPage {
     this.VEN_CLS = this.navParams.get("VEN_CLS");
     this.VEN_Img = this.navParams.get("VEN_Img");
     this.VEN_Address = this.navParams.get("VEN_Address");
-    this.VEN_Address2 = this.navParams.get("VEN_Adress2");
+    this.VEN_Address2 = this.navParams.get("VEN_Address2");
     this.VEN_City = this.navParams.get("VEN_City");
     this.VEN_State = this.navParams.get("VEN_State");
     this.VEN_Zip = this.navParams.get("VEN_Zip");
     this.VEN_Phone = this.navParams.get("VEN_Phone");
     this.VEN_Web = this.navParams.get("VEN_Web");
     this.VEN_Price = this.navParams.get("VEN_Price");
-    this.VEN_Desc = this.navParams.get("VEN_Phone");
+    this.VEN_Desc = this.navParams.get("VEN_Desc");
     console.log("SubcategoryPage",this.navParams)//url?name=value&name=value&...
    fetch('http://34.210.2.173/Subcategories.php?SUBCAT_MASTER='+this.navParams.get('CAT_ID'))
     .then((response) => {
