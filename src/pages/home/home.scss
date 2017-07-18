@@ -17,9 +17,11 @@ page-home {
 @media only screen and
   (max-width: 736px) {
     img {max-width: 65%}
+    p {font-size: 100%;}
     }
 
     @media only screen and
       (max-width: 3000px) and (min-width: 737px) {
-        img {max-width: 15%}
+        img {max-width: 20%}
+        p {font-size: 100%;}
         }
