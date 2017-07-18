@@ -5,7 +5,7 @@
 </ion-header>
 <ion-content padding>
   <div id="search">
-  <ion-searchbar (ionInput)="getvendors($event)"></ion-searchbar>
+  <ion-searchbar (ionInput)="getvendors(vendor)"></ion-searchbar>
   <ion-list>
     <ion-item *ngFor="let vendor of vendors" (click)="selectvendor(vendor)">
       {{ vendor.VEN_Name }}
