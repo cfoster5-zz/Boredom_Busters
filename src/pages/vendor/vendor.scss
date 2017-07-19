@@ -9,6 +9,11 @@ page-vendor {
     //color: #ff7f50;
 }
 
+#hours{
+  text-align: center;
+  font-size: 120%;
+}
+
 .p1{
     //font-weight: bold;
     //font-style: italic;
@@ -16,15 +21,27 @@ page-vendor {
     color: black;
     text-align: center;
     font-size: 120%;
+    position: relative;
+    bottom: 20px;
+}
+
+#subtext{
+  font-size: 80%;
+  position: relative;
+  text-align: center;
+  bottom: 20px;
 }
 
 .description{
   //font-weight: bold;
+  position: relative;
   color: gray;
   border-style: solid;
   border-width: 1px;
   padding-left: 2%;
-  padding-right: 2%
+  padding-right: 2%;
+  bottom: 20px;
+
 }
 
 //cell
@@ -36,7 +53,6 @@ page-vendor {
             margin-top: 5%;
             height: auto;
             width:60%;
-
           }
           .description{
             padding-bottom: 2%;
@@ -46,7 +62,9 @@ page-vendor {
             padding-top: 2%;
           }
           #webbutton {position: relative;
-            left: 25%;}
+            left: 25%;
+            bottom: 20px;
+}
         }
 
 //comp
@@ -69,5 +87,7 @@ page-vendor {
             }
             #webbutton {width: 30%;
               position: relative;
-              left: 35%;}
+              left: 35%;
+              bottom: 20px;
+}
           }

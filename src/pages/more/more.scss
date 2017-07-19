@@ -1,21 +1,5 @@
 .buttons-more-page {
 
-  /*ion-card {
-    margin-bottom: 2em;
-  }
-
-  ion-card-content {
-    background-color: #F4F5F8;
-  }
-
-  ion-card img {
-    width: auto;
-    height: 44px;
-    display: block;
-    margin: 20px auto;
-  }
-*/
-
   }
 
 .title{text-align: center;
@@ -39,14 +23,12 @@ ion-content {
       background: linear-gradient(180deg, #88D1BC, #74E4FF); /* Standard syntax (must be last) */
   }
 
-button {max-width: 50%;
-        }
-
 @media only screen and
   (max-width: 736px) {
-    #morebuttons {max-width: 100%}
+    #morebuttons {max-width: 100%;
+                  bottom: 20px;
     }
-
+}
     @media only screen and
       (max-width: 3000px) and (min-width: 737px) {
         #morebuttons {position: relative;
