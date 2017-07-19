@@ -43,14 +43,26 @@
     <!--<img src="{{vendor.VEN_Img}}" />
 
   </button>-->
-    <ion-item *ngFor="let vendor of vendors" (click)="selectvendorcoupon(vendor)">
+  <ion-list *ngFor="let vendor of vendors">
+    <ion-item *ngFor="let coupon of coupons" (click)="selectvendorcoupon(vendor)">
         <!--<ion-thumbnail class="thumbnail" item-start>-->
           <img class="thumbnail" src="{{vendor.VEN_Img}}" />
         <!--</ion-thumbnail>-->
         <h2>{{vendor.VEN_Name}}</h2>
-        <p *ngFor="let coupon of coupons">{{coupon.CPN_Desc}}</p>
+        <p>{{coupon.CPN_Desc}}</p>
       </ion-item>
+    </ion-list>
 
+    <!--<template ngFor let-vendor [ngForOf]=“vendors”>
+
+      <template ngFor let-coupon [ngForOf]=“coupons”>
+          <ion-item>
+            
+            <h2>{{vendor.VEN_Name}}</h2>
+            <p>{{coupon.CPN_Desc}}</p>
+          </ion-item>
+        </template>
+    </template>-->
 
     <!--  <ion-item>
         <ion-thumbnail item-start>
