@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { VendorPage } from '../vendor/vendor';
-
+import { DataProvider } from '../../providers/data/data';
 
 @Component({
   selector: 'page-search',
   templateUrl: 'search.html'
 })
 export class SearchPage {
-
+  searchTerm: string = '';
   vendors = [];
+  items: any;
 
   //items;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public dataService: DataProvider) {
 
   fetch('http://34.210.2.173/Vendors.php')
    .then((response) => {
@@ -37,28 +38,17 @@ export class SearchPage {
 
 
   }
+  ionViewDidLoad() {
+    this.setFilteredItems();
 
+  }
 
-    //getvendors(ev) {
-    getvendors(vendors) {
-    //getvendors(data) {
-      // Reset vendors back to all of the items
-      this.vendors;
+    setFilteredItems(){
 
-      // set val to the value of the ev target
-      //var val = ev.target.value;
-      var val = vendors.target.value;
+      this.vendors = this.dataService.filterItems(this.searchTerm);
 
-      // if the value is an empty string don't filter the items
-      if (val && val.trim() != '') {
-        this.vendors = this.vendors.filter((vendors) => {
-
-          //return (vendor.toLowerCase().indexOf(val.toLowerCase()) > -1);
-          return (JSON.stringify(vendors));
-          //eturn (JSON.stringify(data));
-        })
-      }
     }
+
 
 
     selectvendor(vendor) {
