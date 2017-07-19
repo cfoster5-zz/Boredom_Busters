@@ -51,4 +51,10 @@ selectvendor(item) {
   this.navCtrl.push(VendorPage, item);
 }
 
+
+showsearch() {
+    this.navCtrl.push(SearchPage);
+}
+
+
 }

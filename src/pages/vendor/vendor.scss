@@ -15,17 +15,14 @@ page-vendor {
     //font-size: 90%;
     color: black;
     text-align: center;
+    font-size: 120%;
 }
+
 .description{
-  box-shadow: 3px 5px 4px #008080;
   //font-weight: bold;
-  color: black;
+  color: gray;
   border-style: solid;
-  border-color: #b0e0e6;
   border-width: 1px;
-  margin-left: 5%;
-  margin-right: 5%;
-  padding-bottom: 30%;
   padding-left: 2%;
   padding-right: 2%
 }
@@ -35,11 +32,21 @@ page-vendor {
       (max-width: 736px) {
         .vendorimage {
             display: block;
-            margin-left: 30%;
+            margin-left: 20%;
             margin-top: 5%;
             height: auto;
-            width:40%;
+            width:60%;
+
           }
+          .description{
+            padding-bottom: 2%;
+            margin-left: 5%;
+            margin-right: 5%;
+            text-align: center;
+            padding-top: 2%;
+          }
+          #webbutton {position: relative;
+            left: 25%;}
         }
 
 //comp
@@ -47,10 +54,20 @@ page-vendor {
           (max-width: 3000px) and (min-width: 737px) {
             .vendorimage {
               //display: block;
-              margin-left: 40%;
+              margin-left: 38%;
               margin-top: 1%;
               //height: auto;
               width:100%;
 
               }
+            .description{
+              padding-bottom: 1%;
+              margin-left: 35%;
+              margin-right: 35%;
+              text-align: center;
+              padding-top: 1%;
+            }
+            #webbutton {width: 30%;
+              position: relative;
+              left: 35%;}
           }

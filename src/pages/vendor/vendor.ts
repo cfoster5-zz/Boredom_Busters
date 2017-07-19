@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { VendorListPage } from '../vendorlist/vendorlist';
+import { SearchPage } from '../search/search';
+
 @Component({
   selector: 'page-vendor',
   templateUrl: 'vendor.html'
@@ -62,6 +64,10 @@ export class VendorPage {
 
 
       console.log(this.navParams.get("VEN_Name"));
+     }
+
+     showsearch() {
+         this.navCtrl.push(SearchPage);
      }
 
   }
