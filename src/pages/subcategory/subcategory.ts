@@ -51,6 +51,28 @@ export class SubcategoryPage {
      console.log(this.navParams.get("CAT_Type"));
 
   // }
+  /*if (this.items = null)
+    {
+      alert("array doesnt exists");
+      this.navCtrl.push(VendorListPage, item);
+    }
+    else {
+      alert("array exists");
+      alert(this.item.SUBCAT_MASTER);
+      console.log(this.navParams.get("CAT_Type"));
+    }*/
+    ///////////////////////////////////////
+    /*if (this.SUBCAT_MASTER = 1)
+      {
+        alert("array doesnt exists");
+        this.navCtrl.push(VendorListPage, item);
+      }
+      else {
+        alert("array exists");
+        //alert(this.item.SUBCAT_MASTER);
+        console.log(this.navParams.get("CAT_Type"));
+      }*/
+
 
 
   }
