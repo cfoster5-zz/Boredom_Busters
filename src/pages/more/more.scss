@@ -1,6 +1,6 @@
 .buttons-more-page {
 
-  ion-card {
+  /*ion-card {
     margin-bottom: 2em;
   }
 
@@ -14,7 +14,7 @@
     display: block;
     margin: 20px auto;
   }
-
+*/
 
   }
 
@@ -28,6 +28,8 @@ a{
 p{
   font-family: Sinhala Sangam MN, "Arial";
 }
+#moretext{  text-align: center;
+  font-size: 120%;}
 
 ion-content {
       background: #88D1BC; /* For browsers that do not support gradients */
@@ -42,5 +44,11 @@ button {max-width: 50%;
 
 @media only screen and
   (max-width: 736px) {
-    button {max-width: 100%}
+    #morebuttons {max-width: 100%}
     }
+
+    @media only screen and
+      (max-width: 3000px) and (min-width: 737px) {
+        #morebuttons {position: relative;
+          left: 25%;}
+      }
