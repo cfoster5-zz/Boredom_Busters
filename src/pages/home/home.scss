@@ -12,18 +12,24 @@ page-home {
   color: #ff7f50;
 
 }*/
-.transButtons{
-background: none; 
-}
+
 
 @media only screen and
   (max-width: 736px) {
     img {max-width: 68%}
     p {font-size: 100%;}
+    .transButtons{
+      background: none; 
+      padding: 10px 10px;
+      }
     }
 
     @media only screen and
       (max-width: 3000px) and (min-width: 737px) {
         img {max-width: 23%}
         p {font-size: 100%;}
+        .transButtons{
+          background: none; 
+          padding: 10px 10px;
+            }
         }
