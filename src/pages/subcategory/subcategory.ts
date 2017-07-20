@@ -29,9 +29,10 @@ export class SubcategoryPage {
           {
             this.navCtrl.push(VendorListPage, data);
             console.log("subcategory name empty");
+            console.log(data.length);
           }
-
-
+          //returns how many subcategories a category has 
+         console.log(data.length);
           this.items = data;
 
 
