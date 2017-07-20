@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { SearchPage } from '../search/search';
 import { VendorPage } from '../vendor/vendor';
+import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-vendorlist',

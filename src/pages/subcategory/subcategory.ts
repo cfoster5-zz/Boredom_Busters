@@ -25,9 +25,16 @@ export class SubcategoryPage {
         }
         // Examine the text in the response
         response.json().then((data) => {
-          //console.log(data);
+          if(data.length == 0)
+          {
+            this.navCtrl.push(VendorListPage, data);
+            console.log("subcategory name empty");
+          }
+
 
           this.items = data;
+
+
 
         });
       }
