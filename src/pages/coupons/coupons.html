@@ -53,11 +53,18 @@
       </ion-item>
     </ion-list>
 
+<div *ngFor="let v of vendors">
+{{v.VEN_Name}}
+<div *ngFor="let c of coupons">
+{{c.CPN_Desc}}
+</div>
+</div>
+
     <!--<template ngFor let-vendor [ngForOf]=“vendors”>
 
       <template ngFor let-coupon [ngForOf]=“coupons”>
           <ion-item>
-            
+
             <h2>{{vendor.VEN_Name}}</h2>
             <p>{{coupon.CPN_Desc}}</p>
           </ion-item>

@@ -49,6 +49,8 @@ constructor(public navCtrl: NavController/*, public navParams: NavParams*/) {
          console.log(/*"Coupons",*/data);
          //document.getElementById("CPNDesc").innerHTML = data[0].CPN_Desc;
          this.coupons = data;
+
+
        });
      }
    )
@@ -56,8 +58,23 @@ constructor(public navCtrl: NavController/*, public navParams: NavParams*/) {
      console.log('Fetch Error :-S', err);
    });
 
+   for(var v in this.vendors){
+console.log("made it in");
+   this.vendors[v].VEN_ID = new Array<{}>();
+
+   for(var c in this.coupons){
+
+       if(this.vendors[v].VEN_ID == this.coupons[c].CPN_Master){
+           this.navCtrl.push(CouponsPage, this.coupons[c].CPN_Desc);
+       }
+    }
+
+   }
+
 
 }
+
+
 
   showsearch() {
       this.navCtrl.push(SearchPage);
