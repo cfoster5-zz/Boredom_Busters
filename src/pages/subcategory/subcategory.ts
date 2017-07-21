@@ -27,11 +27,13 @@ export class SubcategoryPage {
         response.json().then((data) => {
           if(data.length == 0)
           {
+            //data is being passed here and I want to pass item instead?
+            //function vendorListData(item);
             this.navCtrl.push(VendorListPage, data);
             console.log("subcategory name empty");
             console.log(data.length);
           }
-          //returns how many subcategories a category has 
+          //returns how many subcategories a category has
          console.log(data.length);
           this.items = data;
 
@@ -47,6 +49,11 @@ export class SubcategoryPage {
 
 
   }
+/*
+  vendorListData(item)
+  {
+    this.navCtrl.push(VendorListPage, item);
+  }*/
 
  ionViewDidLoad(item){
    //this.items is the subcategory array
