@@ -10,14 +10,14 @@ import { HomePage } from '../home/home';
   templateUrl: 'vendorlist.html'
 })
 export class VendorListPage {
+
   SUBCAT_NAME;
-  VEN_Name;
   items = [];
    constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.SUBCAT_NAME =this.navParams.get("SUBCAT_NAME");
-    this.VEN_Name =this.navParams.get("VEN_Name");
-    console.log("SubcategoryPage",this.navParams)//url?name=value&name=value&...
-    //console.log("VendorListPage",this.navParams)
+    //console.log("SubcategoryPage",this.navParams)//url?name=value&name=value&...
+    console.log("VendorListPage",this.navParams)
+
    fetch('http://34.210.2.173/Vendors.php?SUBCAT_ID='+this.navParams.get('SUBCAT_MASTER'))
     .then((response) => {
         if (response.status !== 200) {
@@ -28,7 +28,7 @@ export class VendorListPage {
         // Examine the text in the response
         response.json().then((data) => {
           //console.log(data);
-
+          //console.log(this.navParams.get("VEN_Name"));
           this.items = data;
 
         });
@@ -43,7 +43,8 @@ export class VendorListPage {
   }
   ionViewDidLoad(){
 
-    console.log(this.navParams.get("VEN_Name"));
+
+
    console.log(this.navParams.get("SUBCAT_NAME"));
 
  }
