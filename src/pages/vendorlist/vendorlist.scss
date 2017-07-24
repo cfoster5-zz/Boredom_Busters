@@ -1,18 +1,6 @@
 page-vendorlist {
 
 .vendor{max-width: 100%}
+.vendortitle {text-align: center;}
 
-}
-
-@media only screen and
-  (max-width: 736px) {
-    #venlist {position: relative;
-        left: -10%;
-    }
-}
-    @media only screen and
-      (max-width: 3000px) and (min-width: 737px) {
-        #venlist {position: relative;
-          left: -5%;
-      }
 }
