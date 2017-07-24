@@ -11,12 +11,13 @@ import { HomePage } from '../home/home';
 })
 export class VendorListPage {
   SUBCAT_NAME;
-  SUBCAT_ID;
-  SUBCAT_MASTER;
+  VEN_Name;
   items = [];
    constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.SUBCAT_NAME =this.navParams.get("SUBCAT_NAME");
-    console.log("VendorListPage",this.navParams)//url?name=value&name=value&...
+    this.VEN_Name =this.navParams.get("VEN_Name");
+    console.log("SubcategoryPage",this.navParams)//url?name=value&name=value&...
+    //console.log("VendorListPage",this.navParams)
    fetch('http://34.210.2.173/Vendors.php?SUBCAT_ID='+this.navParams.get('SUBCAT_MASTER'))
     .then((response) => {
         if (response.status !== 200) {
@@ -40,12 +41,12 @@ export class VendorListPage {
 
 
   }
-   ionViewDidLoad(){
+  ionViewDidLoad(){
 
-
+    console.log(this.navParams.get("VEN_Name"));
    console.log(this.navParams.get("SUBCAT_NAME"));
 
-  }
+ }
 
 selectvendor(item) {
   console.log("Selected Item", item);

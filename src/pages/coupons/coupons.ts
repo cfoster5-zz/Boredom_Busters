@@ -59,7 +59,8 @@ constructor(public navCtrl: NavController/*, public navParams: NavParams*/) {
    });
 
    for(var v in this.vendors){
-console.log("made it in");
+     console.log("CouponsPage",this.vendors,this.coupons);
+     console.log("made it in");
    this.vendors[v].VEN_ID = new Array<{}>();
 
    for(var c in this.coupons){
