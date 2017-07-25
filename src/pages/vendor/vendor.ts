@@ -65,6 +65,14 @@ export class VendorPage {
 
     console.log(this.navParams.get("VEN_Name"));
 
+    //vendor phone number formating (812)245-3232
+    var venNum = this.VEN_Phone;
+    var areaCode = '(' + venNum.slice(0,3) + ')';
+    var threeDigits = venNum.slice(3,6) + '-';
+    var fourDigits = venNum.slice(6,10);
+    this.VEN_Phone = areaCode + threeDigits + fourDigits;
+
+
     //split time into hours and minutes
     var OpenPart = this.VEN_OPN.split(":");
     var ClosePart = this.VEN_CLS.split(":");
