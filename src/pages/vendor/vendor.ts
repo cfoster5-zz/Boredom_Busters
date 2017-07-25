@@ -63,8 +63,58 @@ export class VendorPage {
      ionViewDidLoad(){
 
 
-      console.log(this.navParams.get("VEN_Name"));
-     }
+    console.log(this.navParams.get("VEN_Name"));
+
+    //split time into hours and minutes
+    var OpenPart = this.VEN_OPN.split(":");
+    var ClosePart = this.VEN_CLS.split(":");
+
+    //array to store start time
+    var Ohours = OpenPart[0];
+    var Ominutes = OpenPart[1];
+    var Osuffix = "AM";
+
+    //array to store end time
+    var Chours = ClosePart[0];
+    var Cminutes = ClosePart[1];
+    var Csuffix = "AM";
+
+
+    //convert military time to am/pm for start time
+    if (Ohours > 12) {
+        Ohours = Ohours - 12;
+        Osuffix = "PM";
+
+    }
+    else if (Ohours == "00") {
+        Ohours = 12;
+        Osuffix = "AM";
+    }
+    else if (Ohours == "12") {
+        Osuffix = "PM";
+    }
+
+    //convert military time to am/pm for end time
+    if (Chours > 12) {
+        Chours = Chours - 12;
+        Csuffix = "PM";
+
+    }
+    else if (Chours == "00") {
+        Chours = 12;
+        Csuffix = "AM";
+    }
+    else if (Chours == "12") {
+        Csuffix = "PM";
+    }
+
+    console.log(Chours + ":" + Cminutes + " " + Csuffix);
+    //assign new hours too variables
+    this.VEN_OPN = Ohours + ":" + Ominutes + " " + Osuffix;
+    this.VEN_CLS = Chours + ":" + Cminutes + " " + Csuffix;
+
+
+    }
 
      showsearch() {
          this.navCtrl.push(SearchPage);
