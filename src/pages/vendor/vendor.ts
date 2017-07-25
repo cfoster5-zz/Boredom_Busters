@@ -81,7 +81,11 @@ export class VendorPage {
 
 
     //convert military time to am/pm for start time
-    if (Ohours > 12) {
+    if (Ohours < 10){
+      //only shows index 1 of Ohours array
+      Ohours = Ohours.slice(1);
+    }
+    else if (Ohours > 12) {
         Ohours = Ohours - 12;
         Osuffix = "PM";
 
@@ -95,7 +99,11 @@ export class VendorPage {
     }
 
     //convert military time to am/pm for end time
-    if (Chours > 12) {
+    if (Chours < 10){
+      //only shows index 1 of Chours array
+      Chours = Chours.slice(1);
+    }
+    else if (Chours > 12) {
         Chours = Chours - 12;
         Csuffix = "PM";
 

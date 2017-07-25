@@ -34,9 +34,10 @@ export class SubcategoryPage {
             console.log(data.length);
           }*/
           //returns how many subcategories a category has
-         //console.log(data.length);
+         console.log(data.length);
           this.items = data;
-
+          //this.ionViewDidLoad(data);
+          this.vendorListData(data);
 
 
         });
@@ -50,48 +51,27 @@ export class SubcategoryPage {
 
   }
 
-  /*vendorListData(item)
-  {
-    this.navCtrl.push(VendorListPage, item);
-  }*/
+ /*ionViewDidLoad(){
 
- ionViewDidLoad(){
-   //this.items is the subcategory array
-   /*if (this.navParams.get("SUBCAT_MASTER") != this.navParams.get("CAT_ID"))
-   {
-     this.navCtrl.push(VendorListPage,item);
-
-   }
-   else {*/
      console.log(this.navParams.get("CAT_Type"));
 
-  // }
-  /*if (this.items = null)
+
+
+
+  }*/
+
+  vendorListData(data)
+  {
+    /*if(data.length == 1)
     {
-      alert("array doesnt exists");
-      this.navCtrl.push(VendorListPage, item);
-    }
-    else {
-      alert("array exists");
-      alert(this.item.SUBCAT_MASTER);
-      console.log(this.navParams.get("CAT_Type"));
+
+      //this.navCtrl.push(VendorListPage, data);
+      console.log(data.SUBCAT_MASTER);
+      //this.selectsubcategory(data);
+      this.navCtrl.push(VendorListPage);
+
     }*/
-    ///////////////////////////////////////
-    /*if (this.SUBCAT_MASTER = 1)
-      {
-        alert("array doesnt exists");
-        this.navCtrl.push(VendorListPage, item);
-      }
-      else {
-        alert("array exists");
-        //alert(this.item.SUBCAT_MASTER);
-        console.log(this.navParams.get("CAT_Type"));
-      }*/
-
-
-
   }
-
 
   showsearch() {
       this.navCtrl.push(SearchPage);

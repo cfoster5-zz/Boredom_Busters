@@ -41,11 +41,14 @@ export class SearchPage {
   ionViewDidLoad() {
     this.setFilteredItems();
 
+
+
   }
 
     setFilteredItems(){
 
       this.vendors = this.dataService.filterItems(this.searchTerm);
+
 
     }
 
