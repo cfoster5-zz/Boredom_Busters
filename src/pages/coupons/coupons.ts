@@ -58,22 +58,7 @@ constructor(public navCtrl: NavController/*, public navParams: NavParams*/) {
      console.log('Fetch Error :-S', err);
    });
 
-   for(var v in this.vendors){
-     console.log("CouponsPage",this.vendors,this.coupons);
-     console.log("made it in");
-   this.vendors[v].VEN_ID = new Array<{}>();
-
-   for(var c in this.coupons){
-
-       if(this.vendors[v].VEN_ID == this.coupons[c].CPN_Master){
-           this.navCtrl.push(CouponsPage, this.coupons[c].CPN_Desc);
        }
-    }
-
-   }
-
-
-}
 
 
 

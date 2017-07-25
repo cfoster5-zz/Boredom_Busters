@@ -24,7 +24,7 @@
 </ion-navbar>
 </ion-header>
 <ion-content>
-  <div *ngFor="let vendor of vendors" (click)="selectcherryvendor(vendor)">
+  <div id="cherrypick" *ngFor="let vendor of vendors" (click)="selectcherryvendor(vendor)">
 <!--*ngif filters rows shown in vendor table on load-->
       <ion-item *ngIf="vendor.VEN_Cherry === '1'">
         <!--<ion-thumbnail class="thumbnail" item-start>-->
