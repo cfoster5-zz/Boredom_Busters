@@ -67,7 +67,7 @@ export class VendorPage {
 
     //vendor phone number formating (812)245-3232
     var venNum = this.VEN_Phone;
-    var areaCode = '(' + venNum.slice(0,3) + ')';
+    var areaCode = '(' + venNum.slice(0,3) + ')'+ ' ';
     var threeDigits = venNum.slice(3,6) + '-';
     var fourDigits = venNum.slice(6,10);
     this.VEN_Phone = areaCode + threeDigits + fourDigits;
