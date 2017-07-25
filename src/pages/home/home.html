@@ -28,12 +28,10 @@
   <!--<h2 class="heading">Table of Contents</h2>-->
 <ion-grid  class="grid">
   <ion-row>
-    <ion-col  *ngFor="let category of categories" col-6>
-      <ion-buttons  (click)="selectcategory(category)">
-        <button class="transButtons">
+    <ion-col (click)="selectcategory(category)" *ngFor="let category of categories" col-6>
+      <ion-buttons class="transButtons">
         <img src="{{category.CAT_IMG}}"/>
-      <p>{{category.CAT_Type}}</p>
-      </button>
+        <p>{{category.CAT_Type}}</p>
       </ion-buttons>
     </ion-col>
   </ion-row>
