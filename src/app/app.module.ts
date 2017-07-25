@@ -15,7 +15,8 @@ import { SearchPage } from '../pages/search/search';
 import { SubcategoryPage } from '../pages/subcategory/subcategory';
 import { VendorListPage } from '../pages/vendorlist/vendorlist';
 import { VendorPage } from '../pages/vendor/vendor';
-import { Couponsimg } from '../pages/couponsimg/couponsimg'
+import { Couponsimg } from '../pages/couponsimg/couponsimg';
+import { VendorListPageNoSub } from '../pages/vendorlist/vendorlistNoSub';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -36,7 +37,8 @@ import { DataProvider } from '../providers/data/data';
     SubcategoryPage,
     VendorListPage,
     VendorPage,
-    Couponsimg
+    Couponsimg,
+    VendorListPageNoSub,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,9 @@ import { DataProvider } from '../providers/data/data';
     SubcategoryPage,
     VendorListPage,
     VendorPage,
-    Couponsimg
+    Couponsimg,
+    VendorListPageNoSub
+
   ],
   providers: [
     StatusBar,
