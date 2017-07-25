@@ -18,7 +18,7 @@ export class VendorListPage {
     //console.log("SubcategoryPage",this.navParams)//url?name=value&name=value&...
     console.log("VendorListPage",this.navParams)
 
-   fetch('http://34.210.2.173/Vendors.php?SUBCAT_ID='+this.navParams.get('SUBCAT_MASTER'))
+   fetch('http://34.210.2.173/Vendors.php?SUBCAT_ID='+this.navParams.get('SUBCAT_ID'))
     .then((response) => {
         if (response.status !== 200) {
           console.log('Looks like there was a problem. Status Code: ' +
