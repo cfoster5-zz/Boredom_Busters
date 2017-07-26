@@ -51,14 +51,14 @@ export class SubcategoryPage {
 
   }
 
- /*ionViewDidLoad(){
+ ionViewDidLoad(){
 
      console.log(this.navParams.get("CAT_Type"));
 
 
 
 
-  }*/
+  }
 
   vendorListData(data)
   {
