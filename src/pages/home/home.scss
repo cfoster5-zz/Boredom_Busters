@@ -15,7 +15,7 @@ page-home {
 
 
 @media only screen and
-  (max-width: 736px) {
+  (max-width: 1080px) {
     img {max-width: 68%}
     p {font-size: 100%;
     color:black;}
@@ -26,7 +26,7 @@ page-home {
     }
 
     @media only screen and
-      (max-width: 3000px) and (min-width: 737px) {
+      (max-width: 3000px) and (min-width: 1081px) {
         img {max-width: 23%}
         p {font-size: 100%;
         color:black;}

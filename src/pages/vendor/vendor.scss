@@ -85,7 +85,7 @@ page-vendor {
 
 //cell
     @media only screen and
-      (max-width: 736px) {
+      (max-width: 1080px) {
         .vendorimage {
             display: block;
             margin-left: 20%;
@@ -109,7 +109,7 @@ page-vendor {
 
 //comp
         @media only screen and
-          (max-width: 3000px) and (min-width: 737px) {
+          (max-width: 3000px) and (min-width: 1081px) {
             .vendorimage {
               //display: block;
               margin-left: 38%;

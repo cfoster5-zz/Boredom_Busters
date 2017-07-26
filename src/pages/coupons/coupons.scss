@@ -1,6 +1,6 @@
 //cell
     @media only screen and
-      (max-width: 736px) {
+      (max-width: 1080px) {
         .thumbnail {width: 14%;
                     float: left;
                     margin-right: 2%;
@@ -12,7 +12,7 @@
 
 //comp
         @media only screen and
-          (max-width: 3000px) and (min-width: 737px) {
+          (max-width: 3000px) and (min-width: 1081px) {
             .thumbnail {width: 5%;
                         float: left;
                         margin-right: 2%;}
