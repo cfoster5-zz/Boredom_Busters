@@ -11,6 +11,13 @@ $font-path: "../assets/fonts";
 // http://ionicframework.com/docs/theming/rtl-support/
 $app-direction: ltr;
 
+//css for coupons page
+$card-ios-background-color: transparent;
+$card-md-background-color: transparent;
+$card-wp-background-color: transparent;
+$card-ios-border-style: none;
+$card-md-border-style: none;
+$card-wp-border-style: none;
 
 @import "ionic.globals";
 
