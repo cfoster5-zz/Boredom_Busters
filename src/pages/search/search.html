@@ -7,9 +7,11 @@
   <div id="search">
   <ion-searchbar placeholder='Search for Vendors' [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
   <ion-list>
+    <a>
     <ion-item id="searchtext" *ngFor="let vendor of vendors" (click)="selectvendor(vendor)">
       {{ vendor.VEN_Name }}
     </ion-item>
+  </a>
   </ion-list>
   </div>
 

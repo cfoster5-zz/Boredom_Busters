@@ -28,8 +28,10 @@
 
 <ion-content>
   <ion-list>
+    <a>
     <button class="vendor" ion-item *ngFor="let item of items" (click)="selectvendor(item)">
       {{ item.VEN_Name }}
     </button>
+  </a>
   </ion-list>
 </ion-content>
