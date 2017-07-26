@@ -37,7 +37,7 @@ export class SubcategoryPage {
          console.log(data.length);
           this.items = data;
           //this.ionViewDidLoad(data);
-          this.vendorListData(data);
+          //this.vendorListData(data);
 
 
         });
